@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/quiz.css">
+    
+    <title>Quiz</title>
+   <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+$(function() {
+  menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > menu_top) {
+      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') != 'fixed') {
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','fixed');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
+           $('.menu').css('background','rgba(0, 0, 0, 0.6)');
+        $('.content').css('margin-top','20%');
+      }
+    } else {
+      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') == 'fixed') {
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
+          $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+        $('.content').css('margin-top','');
+      }
+    }
+  });
+});
+</script>
+</head>
+
+<body>
+     <div class="backk"> 
+<img class="header" src="group2.png">
+        <div class="line"></div>
+    <div class="container">
+        <div class="site-header"></div>
+        <h1>Какое десятилетие тебе подходит?</h1>
+        <main>
+                    <div class="menu">
+                    
+         <a class="butt_m" href="buttom_main.html">Главная</a> 
+                            
+            <a class="butt_r" href="button_rating.html">Рейтинг</a> 
+            
+            <a class="butt_p" href="button_puzzle.html">Пазлы</a> 
+                            
+           <a class="butt_t" href="button_tests.html">Тесты</a> 
+                            
+          <a class="butt_a" href="button_about.html">О нас</a> 
+                            
+            <a class="butt_c" href="button_contacts.html">Контакты</a> 
+        </div>
+            
+            
+            
+ <div id="menu-burger">
+  <span class="menu-icon"></span>
+</div>
+
+<div id="overlay-menu">
+<nav role='navigation'>
+     <ul>            
+         <li><a href="buttom_main.html">Главная</a> </li>
+                            
+            <li><a href="button_rating.html">Рейтинг</a>  </li>
+            
+            <li><a href="button_puzzle.html">Пазлы</a> </li>
+                            
+            <li><a href="button_tests.html">Тесты</a>  </li>
+                            
+            <li><a href="button_about.html">О нас</a>  </li>
+                            
+            <li><a href="button_contacts.html">Контакты</a>  </li>
+                </ul>
+            </nav>
+            </div>
+            
+            
+  
+
+      <script id="rendered-js" >
+$('#menu-burger').click(function () {
+  var overlayMenu = $('#overlay-menu'),
+  menuIconLines = $('#menu-burger .menu-icon'),
+  menuBurger = $('#menu-burger');
+
+  if (overlayMenu.hasClass('open')) {
+    overlayMenu.removeClass('open');
+    menuIconLines.removeClass('open');
+    menuBurger.removeClass('open');
+  } else {overlayMenu.addClass('open');
+    menuIconLines.addClass('open');
+    menuBurger.addClass('open');
+  };
+
+
+});
+    </script> 
+            <div class="question"></div>
+            <ul class="answer"></ul>
+            </main>
+
+    <script src="js/quiz_data.js"></script>
+    <script src="js/quiz_answer.js"></script>
+    <script src="js/quiz_code.js"></script>
+    </div>
+    </div>
+</body>
+
+</html>
