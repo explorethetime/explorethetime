@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <link rel="stylesheet" href="style1.css">      
+        <title>5 фильмов</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+$(function() {
+  menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > menu_top) {
+      if ($('.menu').css('position') != 'fixed') {
+        $('.menu').css('position','fixed');
+          $('.menu').css('margin','0 auto');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
+           $('.menu').css('background','rgba(0, 0, 0, 0.6)');
+        $('.content').css('margin-top','7%');
+      }
+    } else {
+      if ($('.menu').css('position') == 'fixed') {
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
+          $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+        $('.content').css('margin-top','');
+      }
+    }
+  });
+});
+            
+            $(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+        
+        
+
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Gruppo&family=Play:wght@400;700&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+</style>
+        <style>
+        body{
+    margin: 0;
+    background-color: black;
+}
+.background{
+    width: 100%;
+    background: url("img/back.png");
+    background-size: cover;
+    
+}
+.header {
+    width: 100%;
+    height: 202px;
+    background: url('img/group2.png') center no-repeat;
+    background-size: cover;
+}
+.header_inner{
+    max-width: 1600px;
+    margin: 0 20px;
+    display: flex;
+}
+
+
+
+/*Фиксация----------------------------------------*/
+
+.menu
+{
+  width: 100%;
+max-width: 2000px;
+  height: 60px; 
+    display: flex;
+    justify-content: space-around;
+    z-index: 50;
+}
+
+
+.butt_m,
+.butt_r,
+.butt_p,
+.butt_t,
+.butt_a,
+.butt_c
+{  
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+text-align: center;
+color: rgba(255, 255, 255, 0.88);
+    text-decoration: none; 
+}
+/*Ссылка "Главная"----------------------------------------*/
+.butt_m::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_m::before,
+.butt_m::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_m:hover {
+  font-weight: bold;
+}
+
+
+
+/*Ссылка "Рейтинг"---------------------------------------*/
+.butt_r::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_r::before,
+.butt_r::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_r:hover {
+  font-weight: bold;
+}
+
+
+/*Ссылка "Пазлы"---------------------------------------*/
+.butt_p::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_p::before,
+.butt_p::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_p:hover {
+  font-weight: bold;
+}
+
+
+
+
+ /*Ссылка "Тесты"*/
+.butt_t::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_t::before,
+.butt_t::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_t:hover 
+{
+  font-weight: bold;
+}
+
+
+
+
+/*Ссылка "О нас"---------------------------------------*/
+.butt_a::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_a::before,
+.butt_a::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_a:hover 
+{
+  font-weight: bold;
+}
+
+
+
+/*Ссылка "Контакты"-----------------------------------*/
+.butt_c::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_c::before,
+.butt_c::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_c:hover {
+  font-weight: bold;
+}
+.bg_transparent{
+    width: 100%;
+    height: 440px;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+.bg_transparent_inner {
+    width: 100%;
+    max-width: 1300px;
+    height: 440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.year{
+font-family: Play;
+font-style: normal;
+font-weight: bold;
+font-size: 110px;
+color: #FFFFFF; 
+margin: auto;
+}
+.year_text{
+width: 50%;
+font-family: Play;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+color: #FFFFFF;
+    margin: auto;
+}
+.main_background1{
+width: 100%;
+height: 1150px;
+background: black;
+background-size: cover;
+margin: auto;
+display: flex;
+justify-content: space-around;
+}
+.backg1{
+width: 100%;
+max-width: 500px;
+display: flex;
+z-index: 1;
+margin: auto;
+margin-left: 0;
+    
+
+
+}
+
+.main_block{
+width: 100%;
+max-width: 1200px;
+margin: 10% auto; 
+display: flex;
+justify-content: space-between;
+position: absolute;
+z-index: 10;
+}
+.text{
+width: 100%;
+max-width: 600px;
+max-height: 600px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 2%;
+}
+.h1{
+font-family: Garamond;
+font-style: normal;
+font-weight: bold;
+font-size: 80px;
+
+color: #FFFFFF;
+
+}
+.h1:hover{
+    color: rgba(141, 11, 35, 0.88);
+}
+.main_text{
+font-family: Play;
+font-style: normal;
+font-weight: normal;
+font-size: 38px;
+text-align: left;
+
+color: #FFFFFF;
+}
+.film_year{
+font-family: Play;
+font-style: normal;
+font-weight: normal;
+font-size: 38px;
+
+color: #FFFFFF;
+}
+.country{
+font-family: Play;
+font-style: normal;
+font-weight: normal;
+font-size: 38px;
+
+color: #FFFFFF;
+}
+.picture{
+    width: 100%;
+    max-width: 450px;
+    max-height: 650px;
+    display: flex;
+    padding: 2%;
+}
+.bg2 {
+background: url("img/back3.png");
+width: 100%;  
+background-size: cover;
+padding: 50px 0;
+
+}
+.media {
+width: 100%;  
+display: flex;
+justify-content: center;
+    margin: auto;
+
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+color: #FFFFFF;
+}
+.q {
+width: 100%;
+display: flex;
+justify-content: center;
+    margin: 10px auto;
+
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+text-align: center;
+color: #FFFFFF;
+}
+.contacts{
+display: flex;
+justify-content: space-around;
+width: 100%;
+max-width: 500px;
+margin: 40px auto;
+
+}
+.inst:hover {
+  filter: drop-shadow(0px 0px 20px #FEF8F8);    
+}
+.tg:hover {
+     filter: drop-shadow(0px 0px 20px #FEF8F8); 
+}
+.vk:hover {
+     filter: drop-shadow(0px 0px 20px #FEF8F8); 
+}
+.right_line{
+ width: 33%;
+}
+.right_line_bg{
+width: 100%;
+background: rgba(0, 0, 0, 1);
+ margin: 0;
+display: flex;
+    justify-content: flex-end;
+}
+
+.scrollup{
+width: 10%;
+max-width: 60px;
+position: fixed;  
+height: 10%; 
+right: 10%;
+bottom: 5%;
+    z-index: 200;
+}
+
+ 
+* {
+box-sizing: border-box;
+}
+
+a {
+text-decoration: none;
+}
+
+#menu-burger {
+background: rgba(141, 11, 35, 0.88);
+border-radius: 50%;
+position: fixed;
+margin:-10% 90%;
+cursor: pointer;
+z-index: 200;
+}
+
+#menu-burger .menu-icon {
+display: block;
+height: 2px;
+width: 20px;
+background: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -9px;
+margin-top: -1px;
+}
+
+#menu-burger .menu-icon:after {
+content: '';
+display: block;
+height: 2px;
+width: 18px;
+background: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -9px;
+margin-top: -5px;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon:before {
+content: ' ';
+display: block;
+height: 2px;
+width: 18px;
+background: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -9px;
+margin-top: 4px;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon.open:before{
+transform: rotate(45deg);
+margin-top: -1px;
+background: #000;
+}
+
+#menu-burger .menu-icon.open:after{
+transform: rotate(-45deg);
+margin-top: -1px;
+background: #000;
+}
+
+#menu-burger.open {
+background: #fff;
+}
+
+#menu-burger .menu-icon.open {
+background: #fff;
+}
+
+#overlay-menu {
+position: fixed;
+background: rgba(141, 11, 35, 0.88);
+height: 100%;
+width: 30%;
+top: 0;
+opacity: 0.85;
+z-index: 100;
+right: -100%;
+transition: 0.35s;
+}
+
+#overlay-menu.open {
+right: 0%;
+}
+
+#overlay-menu nav {
+height: 60%;
+position: relative;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+font-size: 32px;
+text-align: center;
+}
+
+#overlay-menu nav ul {
+display: inline-block;
+margin: auto;
+height: 100%;
+}
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+margin-bottom: 20px;
+list-style-type: none
+}
+
+#overlay-menu nav ul li a {
+color: #fff;
+
+}
+
+#overlay-menu nav ul li a:after {
+content: ' ';
+display: block;
+position: absolute;
+top: 100%;
+left: 0;
+height: 3px;
+width: 0%;
+background: #fff;
+transition: 0.25s;
+}
+
+#overlay-menu nav ul li a:hover:after {
+width: 100%;
+}
+
+@media (min-width: 1170px){
+#menu-burger{
+display: none;
+}
+}
+@media (max-width: 1170px){
+.menu{
+display: none;
+}
+#menu-burger{
+display: inline-block;
+width: 5vw;
+height: 5vw;
+
+}
+} 
+@media (max-width: 1100px){
+    .picture{
+      max-width: 350px;
+      max-height: 550px;
+    }
+    .main_background1{
+height: 980px;
+}
+    .backg1{
+     max-width: 400px;   
+    }
+}
+        </style>
+        
+        
+        
+        
+    </head>
+    <body>
+        <div class="background">
+        <header class="header">
+            <div class="header_inner">
+               
+            </div>
+        </header>
+                <div class="menu">
+        
+            <a class="butt_m" href="buttom_main.html">Главная</a> 
+                            
+             <a class="butt_r" href="button_rating.html">Рейтинг</a>  
+            
+            <a class="butt_p" href="button_puzzle.html">Пазлы</a>
+                            
+            <a class="butt_t" href="button_tests.html">Тесты</a> 
+                            
+            <a class="butt_a" href="button_about.html">О нас</a> 
+                            
+            <a class="butt_c" href="button_contacts.html">Контакты</a> 
+
+        </div> 
+            
+<div id="menu-burger">
+<span class="menu-icon"></span>
+</div>
+
+<div id="overlay-menu">
+<nav role='navigation'>
+<ul>
+<li><a href="buttom_main.html">Главная</a> </li>
+
+<li><a href="button_rating.html">Рейтинг</a> </li>
+
+<li><a href="button_puzzle.html">Пазлы</a> </li>
+
+<li><a href="button_tests.html">Тесты</a> </li>
+
+<li><a href="button_about.html">О нас</a> </li>
+
+<li><a href="button_contacts.html">Контакты</a> </li>
+</ul>
+</nav>
+</div>
+               <script id="rendered-js" >
+$('#menu-burger').click(function () {
+var overlayMenu = $('#overlay-menu'),
+menuIconLines = $('#menu-burger .menu-icon'),
+menuBurger = $('#menu-burger');
+
+if (overlayMenu.hasClass('open')) {
+overlayMenu.removeClass('open');
+menuIconLines.removeClass('open');
+menuBurger.removeClass('open');
+} else {overlayMenu.addClass('open');
+menuIconLines.addClass('open');
+menuBurger.addClass('open');
+};
+
+});
+</script>     
+            
+            <div class="bg_transparent">
+            <div class="bg_transparent_inner">
+             <div class="year">
+                 <span class="underline">
+                     1990-е
+                 </span>
+                </div>
+             <div class="year_text">90-е годы всем вспоминаются по-разному. Кто-то говорит, что эти годы были насыщенными, романтическими. Кто-то ругает. Кинематограф 90-х как мост, соединяющий прошлое с будущим.</div>
+            </div>
+            </div>
+        </div>
+        
+           <div class="main_background1"> <!-- Секция с фоном-->
+                <img class="backg1" src="img/5filmov.png"><!-- Картинка с перьями-->
+               <div class="main_block">
+                    <img class="picture" src="img/homealone.jpg">  <!-- Постер-->
+                        <div class="text"> <!-- Текст-->
+                                      <div class="h1"> <!-- Заголовок фильма-->
+                                          Один дома
+                            </div>
+                                      <div class="main_text"> <!-- Главный текст-->
+                                          8-летнего Кевина часто не замечают. В большой семье у родителей не хватает времени на решения его проблем. Парнишка мечтает остаться один в доме, и его мечта становится явью...
+                            </div>
+                                      <div class="film_year"> <!-- Год выпуска-->
+                                          <b>Год выпуска:</b> 1990
+                            </div>
+                                      <div class="country"> <!-- Страна выпуска-->
+                                          <b>Страна:</b> США
+                            </div>
+               </div>
+             </div>
+            
+            </div>
+        
+        
+        
+        
+          <div class="main_background1"> <!-- Секция с фоном-->
+                <img class="backg1" src="img/5filmov.png"><!-- Картинка с перьями-->
+               <div class="main_block">
+                    <img class="picture" src="img/titanic.jpg">  <!-- Постер-->
+                        <div class="text"> <!-- Текст-->
+                                      <div class="h1"> <!-- Заголовок фильма-->
+                                          Титаник
+                            </div>
+                                      <div class="main_text"> <!-- Главный текст-->
+                                           В первом и последнем плавании «Титаника» встречаются двое.Чувства молодых только расцветают, но на их пути появляется айсберг, ставший помехой всему...
+
+                          </div>
+                                      <div class="film_year"> <!-- Год выпуска-->
+                                          <b>Год выпуска:</b> 1997
+                            </div>
+                                      <div class="country"> <!-- Страна выпуска-->
+                                          <b>Страна:</b> США
+                            </div>
+               </div>
+             </div>
+            
+            </div>
+
+        
+        
+          <div class="main_background1"> <!-- Секция с фоном-->
+                <img class="backg1" src="img/5filmov.png"><!-- Картинка с перьями-->
+               <div class="main_block">
+                    <img class="picture" src="img/krasotka.jpg">  <!-- Постер-->
+                        <div class="text"> <!-- Текст-->
+                                      <div class="h1"> <!-- Заголовок фильма-->
+                                            Красотка
+                            </div>
+                                      <div class="main_text"> <!-- Главный текст-->
+                                           Финансовый магнат Эдвард Льюис, проезжая по ночному городу, останавливается около красивой женщины. Ее зовут Вивьен...                          </div>
+                                      <div class="film_year"> <!-- Год выпуска-->
+                                          <b>Год выпуска:</b> 1990
+                            </div>
+                                      <div class="country"> <!-- Страна выпуска-->
+                                          <b>Страна:</b> США
+                            </div>
+               </div>
+             </div>
+            
+            </div>
+        
+        
+        
+        
+        <div class="main_background1"> <!-- Секция с фоном-->
+                <img class="backg1" src="img/5filmov.png"><!-- Картинка с перьями-->
+               <div class="main_block">
+                    <img class="picture" src="img/pobegizsh.jpg">  <!-- Постер-->
+                        <div class="text"> <!-- Текст-->
+                                      <div class="h1"> <!-- Заголовок фильма-->
+Побег из Шоушенка
+                            </div>
+                                      <div class="main_text"> <!-- Главный текст-->
+                                        История Энди Дюфрейна начинается в зале суда, из которого бывший вице-президент банка, приговоренный к двум пожизненным срокам, попадет в самую мрачную тюрьму Англии...                          </div>
+                                      <div class="film_year"> <!-- Год выпуска-->
+                                          <b>Год выпуска:</b> 1994
+                            </div>
+                                      <div class="country"> <!-- Страна выпуска-->
+                                          <b>Страна:</b> США
+                            </div>
+               </div>
+             </div>
+            
+            </div>
+        
+        
+        
+         <div class="main_background1"> <!-- Секция с фоном-->
+                <img class="backg1" src="img/5filmov.png"><!-- Картинка с перьями-->
+               <div class="main_block">
+                    <img class="picture" src="img/forrest.jpg">  <!-- Постер-->
+                        <div class="text"> <!-- Текст-->
+                                      <div class="h1"> <!-- Заголовок фильма-->
+                                         Форрест Гамп
+                            </div>
+                                      <div class="main_text"> <!-- Главный текст-->
+                                           Форрест Гамп - слабоумный молодой человек, добрый, открытый и бесхитростный. Он сидит на скамейке в парке и рассказывает историю своей жизни каждому, кто к нему подсаживается...                          </div>
+                                      <div class="film_year"> <!-- Год выпуска-->
+                                          <b>Год выпуска:</b> 1994
+                            </div>
+                                      <div class="country"> <!-- Страна выпуска-->
+                                          <b>Страна:</b> США
+                            </div>
+               </div>
+             </div>
+              
+            </div>
+
+
+        <div class="bg2">
+           
+     <div class="media">КОНТАКТЫ</div>
+   <div class="q">Остались вопросы? Свяжись с нами.</div>
+         <div class="contacts">
+            <a href="www.instagram.com" target="_blank"><img class="inst" src="img/inst.svg"></a> 
+            <a href="" target="_blank"><img class="tg" src="img/telega.svg"></a>
+            <a href="" target="_blank"><img class="vk" src="img/vk-social-logotype%201.svg"></a>
+            </div>
+            <div>
+            <img class="scrollup" src="img/knopka.svg">
+            </div>
+        </div>
+
+    </body>
+</html>
