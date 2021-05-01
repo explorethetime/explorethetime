@@ -1,0 +1,83 @@
+html{
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #FFFFFF;
+  body{
+    background: url(img/bg.jpg);
+    background-size: cover;
+    margin: 0;
+  }
+}
+.container{
+  padding: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.rating_shell{
+  width: 100%;
+  display: flex;
+  margin-bottom: 9%;
+}
+
+.rating__image{
+  img{
+    max-height: 498px;
+  }
+}
+.rating__info{
+  padding-left: 11.5%;
+}
+.rating___topic{
+  margin-top: -3%;
+  font-family: EB Garamond;
+  font-size: 5.2857rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 7%;
+  padding-right: 2%;
+}
+.mark___title{
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.mark___line{
+  margin-top: 1.5%;
+  height: 8px;
+  max-width: 570px;
+  width: 570px;
+  background: #C4C4C4;
+  border-radius: 40px;
+}
+.progress_line{
+  height: 8px;
+  max-width: 570px;
+  width: 0px;
+  background: #8D0B23;
+  border-radius: 40px;
+}
+.mark{
+  color: rgba(255, 255, 255, 0.88);
+  font-family: Play;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 64px;
+}
+.poisk_mark{
+  padding-left: 29px;
+}
+.imdb_mark{
+  padding-left: 146px;
+}
+.mark___title{
+  white-space: nowrap;
+}
+.second___mark{
+  padding-top: 6%;
+}
