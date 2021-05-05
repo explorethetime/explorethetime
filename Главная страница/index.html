@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">      
+        <title>Explore the time</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+                        <link rel="icon" href="img/mask.png" type="image/x-icon"> 
+
+        <script>
+$(function() {
+  menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > menu_top) {
+      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') != 'fixed') {
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','fixed');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
+           $('.menu').css('background','rgba(0, 0, 0, 0.6)');
+        $('.content').css('margin-top','0');
+      }
+    } else {
+      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') == 'fixed') {
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
+          $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+        $('.content').css('margin-top','');
+      }
+    }
+  });
+});
+</script>
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Gruppo&family=Play:wght@400;700&display=swap');
+</style>
+    </head>
+    <body>  
+        <div class="backk"> 
+<img class="header" src="img/group2.png">
+        <div class="line"></div>
+        <div class="menu">
+                    
+         <a class="butt_m" href="buttom_main.html">Главная</a> 
+                            
+            <a class="butt_r" href="button_rating.html">Рейтинг</a> 
+            
+            <a class="butt_p" href="button_puzzle.html">Пазлы</a> 
+                            
+           <a class="butt_t" href="button_tests.html">Тесты</a> 
+                            
+          <a class="butt_a" href="button_about.html">О нас</a> 
+                            
+            <a class="butt_c" href="button_contacts.html">Контакты</a> 
+        </div>
+            
+            
+            
+ <div id="menu-burger">
+  <span class="menu-icon"></span>
+</div>
+
+<div id="overlay-menu">
+<nav role='navigation'>
+     <ul>            
+         <li><a href="buttom_main.html">Главная</a> </li>
+                            
+            <li><a href="button_rating.html">Рейтинг</a>  </li>
+            
+            <li><a href="button_puzzle.html">Пазлы</a> </li>
+                            
+            <li><a href="button_tests.html">Тесты</a>  </li>
+                            
+            <li><a href="button_about.html">О нас</a>  </li>
+                            
+            <li><a href="button_contacts.html">Контакты</a>  </li>
+                </ul>
+            </nav>
+            </div>
+            
+            
+  
+
+      <script id="rendered-js" >
+$('#menu-burger').click(function () {
+  var overlayMenu = $('#overlay-menu'),
+  menuIconLines = $('#menu-burger .menu-icon'),
+  menuBurger = $('#menu-burger');
+
+  if (overlayMenu.hasClass('open')) {
+    overlayMenu.removeClass('open');
+    menuIconLines.removeClass('open');
+    menuBurger.removeClass('open');
+  } else {overlayMenu.addClass('open');
+    menuIconLines.addClass('open');
+    menuBurger.addClass('open');
+  };
+
+
+});
+    </script>    
+            
+            
+        <div class="content">
+            <h1 class="text">Лучшие фильмы разных времен</h1>
+            <p class="description">Сайт, который позволит прочувствовать атмосферу кинематографа последних десятилетий</p>
+            <p class="choice">Выбери период</p>
+        </div>
+        
+        
+        
+
+
+<div id="slider"></div>
+ <div class="wrapper">
+              <div><img class="film" src="img/films.png"></div>
+
+     <div class="slider">
+         
+         <div class="slider_item" >
+              <div class="slider_item1">
+                  <a href="slide1.html">
+                      
+                  <img src="img/grozdjagneva.png" alt="">
+                  </a>
+     </div>
+             <div class="slider_text">1940-е</div>
+         </div>
+         
+         
+         <div class="slider_item">
+             <div class="slider_item2">
+            <a href="slide2.html">
+             <img src="img/lady.jpg"  alt="">
+                 </a>
+             </div>
+             <div class="slider_text">1950-е</div>
+         </div>
+         
+         
+          <div class="slider_item">
+              <div class="slider_item3">
+            <a href="slide3.html">
+            <img src="img/zavtrak.jpg" alt="">
+             </a>
+         </div>
+              <div class="slider_text">1960-е</div>
+         </div>
+         
+         
+         <div class="slider_item">
+             <div class="slider_item4">
+                 <a href="slide4.html">
+             <img src="img/moskva.jpg" alt="">
+                 </a>
+         </div>
+                           <div class="slider_text">1970-е</div>
+         </div>
+         
+         
+         <div class="slider_item">
+             <div class="slider_item5">
+                 <a href="slide5.html">
+             <img  src="img/batman.jpg" alt="">
+                 </a>
+         </div>
+                           <div class="slider_text">1980-е</div>
+         </div>
+         
+         
+         <div class="slider_item">
+             <div class="slider_item6">
+                 <a href="slide6.html">
+             <img  src="img/pobeg.jpg" alt="">
+                 </a>
+         </div>
+                           <div class="slider_text">1990-е</div>
+         </div>
+         
+         
+         <div class="slider_item"> 
+             <div class="slider_item7">
+                 <a href="slide7.html">
+             <img src="img/harry.jpg" alt="">
+                 </a>
+         </div>
+                           <div class="slider_text">2000-е</div>
+         </div>
+         
+         
+         <div class="slider_item">
+             <div class="slider_item8">
+                 <a href="slide8.html">
+             <img src="img/1.jpg" alt="">
+                 </a>
+         </div>
+                           <div class="slider_text">2010-е</div>
+         </div>
+    
+     </div>
+    <div><img  class="film" src="img/films.png"></div>
+
+            </div>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="js/script.js"></script>
+         <script src="js/slick.min.js"></script>
+    </div>
+
+
+        
+        <section>
+    <div class="left_side">
+      <div class="my_hr"></div>
+      <img src="img/3457%D0%9D3.png" class="my_photo">
+    </div>
+    <div class="right_side">
+      <div class="info_label">
+        <div id="setting">
+         <div class="corner2"></div>
+          <div class="span1">Почему люди смотрят кино?</div>
+          <div class="span2">Просмотр фильма - это своего рода расслабление для мозга.<div class="span22">
+              Кинематограф предлагает ощутить широкий спектр чувств, который доступен каждому. </div> </div>
+              <div class="corner1"></div>
+        </div>
+
+      </div>
+          </div>
+      
+  </section> 
+        
+        <section class="container">
+      
+    <img class="image" src="img/aline2.png">
+<div class="section1">
+    <video controls="controls" autoplay muted loop>
+    <source src="img/videomockup%20(1).mp4">
+
+    </video>
+    </div>
+<div>
+    <p class="text1"> Выбери СВОЙ фильм </p>
+            </div>
+        </section>
+    
+        
+        
+
+     
+        <div class="rectangle01">
+    
+        
+<img class="inf" src="img/back1.png">
+ <img class="line01" src="img/aline.png">
+  <div class="box1"></div>
+                <div class="text01">
+                <div class="corner3"></div>
+                <h3>Интерактивные пазлы</h3>
+                <p>Собери кадр из любимого фильма, и он оживёт у тебя на глазах</p>
+                <div class="corner4"></div>
+                </div>
+        <div class="puzzle"><img src="img/puzzles.png" alt="Пазлы" usemap="#Href"></div>
+
+        <map name="Href">
+            <area shape="rect" coords="90, 60, 290, 260" href="about:blank" alt="1">
+            <area shape="rect" coords="300, 60, 500, 260" href="about:blank" alt="2">
+            <area shape="rect" coords="90, 270, 290, 470" href="about:blank" alt="3">
+            <area shape="poly" coords="330, 400, 500, 300, 600, 470, 440, 580" href="about:blank" alt="4">
+        </map>
+                <form action="about:blank">
+    <button class="bn"
+    onclick="location.href='href';">Перейти к пазлам</button>
+    </form>
+            <div class="rectangle02"> </div>
+        </div>
+        
+        
+        
+        <div class="test">
+<img class="line02" src="img/aline2.png">
+         <img class="circleshadow" src="img/Ellip.png" alt="круг" usemap="#Navigation">
+        <map name="Navigation">
+ <area shape="poly" coords ="399,22,434,27,468,34,506,47,532,59,555,72,581,90,603,110,627,131,641,150,658,170,678,201,688,226,699,250,708,282,715,311,673,318,602,329,597,305,591,287,580,263,567,241,556,224,545,213,524,194,507,180,489,169,471,157,454,150,438,146,421,139,390,134" href="new.html" alt="ссылка1">
+<area shape="poly" coords ="714,311,718,338,720,365,720,388,717,420,711,450,704,478,694,500,681,532,665,557,655,572,645,585,636,596,624,609,613,618,531,542,544,528,557,512,571,492,585,466,596,435,603,409,604,384,606,364,604,342,604,330" href="new.html" alt="ссылка2">
+ <area shape="poly" coords ="613,619,591,640,575,653,547,670,527,681,507,691,485,699,456,708,436,713,416,716,389,719,349,719,321,715,290,709,252,699,220,686,187,668,154,644,125,620,97,589,83,566,68,546,59,530,162,481,171,495,183,512,193,525,207,539,218,548,233,559,242,568,260,578,279,586,299,593,330,601,367,604,385,604,415,597,448,589,476,580,500,566,531,541" href="new.html" alt="ссылка3">
+ <area shape="poly" coords ="60,531,45,500,31,461,23,425,19,376,23,324,29,291,35,266,48,232,60,208,76,179,94,154,114,130,136,110,154,95,176,78,197,66,227,51,253,40,277,32,291,27,322,22,351,21,359,20,385,20,398,21,388,135,373,135,351,136,327,139,310,142,288,149,272,155,257,164,245,170,230,179,214,193,203,205,188,221,175,240,162,258,151,283,144,305,139,340,134,358,134,387,139,413,146,437,150,454,160,473,163,481" href="new.html" alt="ссылка4">
+     </map>
+        
+       <div class="rectangle05">
+       <div class="corner5"></div>
+        <p class="p">Проблема с выбором?</p> 
+      
+        <p1 class="p1"> Определить, какой фильм посмотреть вечером, узнать, как хорошо Вы разбираетесь в актёрах, а также многое другое помогут наши тесты.</p1>
+<div class="corner6"></div>
+            </div>
+        <form action="new.html">
+    <button class="six"
+    onclick="location.href='href';">Перейти к тестам</button>
+    </form>
+        </div>
+        
+        
+        
+         
+       
+        
+        <img class="bg" src="img/bgmain1.png">
+        <img class="line06" src="img/aline.png">
+     <img class="bg2" src="img/fon31.png">
+        <div class="box">
+           <div class="corner7"></div>
+     <div class=h106>О нас</div>
+<p class="text17">Explore the time - это не просто сайт с фильмами, а сайт, заходя на который, ты погружаешься в удивительный мир кинематографа. Целью нашей команды было создание полезного ресурса, который поможет тебе узнать много нового и интересного об истории кино. Теперь у тебя есть +1 тема для разговора, и ты сможешь с лёгкостью обсуждать не только погоду. Мы надеемся, что тебе понравится!</p>
+       <div class="corner8"></div>
+       <img class="img" src="img/photo1.png">
+        </div>
+       ;
+     <h1 class="media">КОНТАКТЫ</h1>
+   <p class="q">Остались вопросы? Свяжись с нами.</p>
+   <a href="www.instagram.com" target="_blank"><img class="inst" src="img/inst.svg"></a> 
+     <a href="" target="_blank"><img class="tel" src="img/telegram.svg"></a>
+     <a href="" target="_blank"><img class="vko" src="img/vk.svg"></a>
+        
+        <img class="line07" src="img/aline2.png">
+     
+        <img class="scrollup" src="img/knopka.svg">
+        
+        <script>
+        $(document).ready(function(){
+
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+
+});
+        </script>
+  
+</body>
+</html>
