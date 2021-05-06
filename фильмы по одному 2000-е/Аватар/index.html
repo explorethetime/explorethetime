@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <link rel="stylesheet" href="style1.css">  
+        <link rel="stylesheet" href="css/style.css">    
+        <title>Аватар</title>
+     <link rel="icon" href="img/mask.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        
+<script>
+$(function() {
+  menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > menu_top) {
+      if ($('.menu').css('position') != 'fixed') {
+        $('.menu').css('position','fixed');
+          $('.menu').css('margin','0 auto');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
+           $('.menu').css('background','rgba(0, 0, 0, 0.6)');
+        $('.content').css('margin-top','7%');
+      }
+    } else {
+      if ($('.menu').css('position') == 'fixed') {
+     $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
+          $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+        $('.content').css('margin-top','');
+      }
+    }
+  });
+});       
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+        <meta name="viewport" content="width=device-width">
+</head>
+    
+<body>
+    <div class="background">
+        <header class="header">
+            <div class="header_inner">
+               
+            </div>
+        </header>
+                
+      <div class="menu">
+        
+            <a class="butt_m" href="buttom_main.html">Главная</a> 
+                            
+             <a class="butt_r" href="button_rating.html">Рейтинг</a>  
+            
+            <a class="butt_p" href="button_puzzle.html">Пазлы</a>
+                            
+            <a class="butt_t" href="button_tests.html">Тесты</a> 
+                            
+            <a class="butt_a" href="button_about.html">О нас</a> 
+                            
+            <a class="butt_c" href="button_contacts.html">Контакты</a> 
+
+        </div> 
+            
+<div id="menu-burger">
+<span class="menu-icon"></span>
+</div>
+
+<div id="overlay-menu">
+<nav role='navigation'>
+<ul>
+<li><a href="buttom_main.html">Главная</a> </li>
+
+<li><a href="button_rating.html">Рейтинг</a> </li>
+
+<li><a href="button_puzzle.html">Пазлы</a> </li>
+
+<li><a href="button_tests.html">Тесты</a> </li>
+
+<li><a href="button_about.html">О нас</a> </li>
+
+<li><a href="button_contacts.html">Контакты</a> </li>
+</ul>
+</nav>
+</div>
+    </div>
+               
+<script id="rendered-js" >
+$('#menu-burger').click(function () {
+var overlayMenu = $('#overlay-menu'),
+menuIconLines = $('#menu-burger .menu-icon'),
+menuBurger = $('#menu-burger');
+
+if (overlayMenu.hasClass('open')) {
+overlayMenu.removeClass('open');
+menuIconLines.removeClass('open');
+menuBurger.removeClass('open');
+} else {overlayMenu.addClass('open');
+menuIconLines.addClass('open');
+menuBurger.addClass('open');
+};
+});
+</script> 
+            
+<div class="bg_transparenta">
+        <div class="bg_transparent">
+               <span class="text">Аватар</span>
+               <div class="text1">Рейтинг: <span class="kino">КиноПоиск 7,9/10</span><div class="kinopoisk">
+                      IMDb 7,8/10</div>
+                      </div>
+               <div class="text1">Год выпуска: <span class="kino">2009</span> 
+                </div>
+                <div class="text1">В ролях: <span class="kino">Сэм Уортингтон, Зои Салдана, Сигурни Уивер, Стивен Лэнг, Мишель Родригес, Джованни Рибизи, Джоэль Мур, Си Си Эйч Паундер</span> 
+                </div>
+             </div>
+</div>
+                 
+    <div class="opisanie">      
+    <div class="rectangle"> 
+           <div class="treyler">Описание фильма</div>
+           <div class="treller">Бывший морпех Джейк Салли прикован к инвалидному креслу. Несмотря на немощное тело, Джейк в душе по-прежнему остается воином. Он получает задание совершить путешествие в несколько световых лет к базе землян на планете Пандора, где корпорации добывают редкий минерал, имеющий огромное значение для выхода Земли из энергетического кризиса.</div> 
+           <div class="video"> 
+           <div class="texttreller">Трейлер</div>
+           <div class="samvidos"> 
+           <video controls="controls">
+           <source src="avatar_trailer.mp4">
+           </video>
+               </div>
+           <form action="https://rezka.ag/films/fiction/647-avatar-2009.html">
+    <button class="six"
+    onclick="location.href='href';">Смотреть фильм</button>
+    </form>
+       
+       <img class="line" src='img/aline.png'>
+               
+               <div class="bodies">
+               <div class="wrapper">
+			<!-- Контент -->
+
+			<div class="slider">
+				<div class="slider__item filter">
+					<img src="img/avatar1.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="img/avatar5.jpg" alt="">
+				</div>
+				<div class="slider__item filter">
+					<img src="img/avatar2.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="img/avatar4.jpg" alt="">
+				</div>
+				<div class="slider__item filter">
+					<img src="img/avatar3.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="img/avatar6.jpg" alt="">
+				</div>
+			</div>
+                   </div>
+			
+			<!-- Подключаем jQuery -->
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<!-- Подключаем слайдер Slick -->
+			<script src="js/slick.min.js"></script>
+			<!-- Подключаем файл скриптов -->
+			<script src="js/script.js"></script>
+		</div>
+               
+        
+        </div>
+        <div class="facts">Интересные факты</div>
+         <div class="textfacts">Фильм поразил всех красотой графики,  и неудивительно, ведь он на 60% был воссоздан в студии и только 40% материала отснято вживую. Причем на обработку каждого кадра, которых в одной секунде 24, уходило не менее 42 рабочих часов. Вся картина длится 2 часа 42 минуты.<div class="textfacts1">
+ Язык племени на'ви является полноценным языком, разработанным специально для фильма лингвистом Полом Фроммером. Фроммер создал около 1000 слов.  </div>
+             <div class="textfacts1"> Большинство звуков животных, услышанных в фильме, представляют собой переработанные звуки динозавров из Парка юрского периода (1993), в частности, T-Rex и Raptors '.</div> </div>  
+   <img class="line2" src='img/aline2.png'>
+   <img class="bg2" src='img/fonik.jpg'>     
+    <img class="line3" src='img/aline.png'>
+   <img class="scrollup" src="img/knopka.svg">
+   <div class="media">КОНТАКТЫ</div>
+   <div class="q">Остались вопросы? Свяжись с нами.</div>
+         <div class="contacts">
+            <a href="www.instagram.com" target="_blank">
+                <img class="inst" src="img/inst.svg"></a> 
+            <a href="" target="_blank">
+                <img class="tg" src="img/telegram.svg"></a>
+            <a href="" target="_blank">
+                <img class="vk" src="img/vk.svg"></a>
+            </div>
+            
+        </div>
+   </div>
+   
+<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script  src='js/script.js'></script> 
+   
+    </body>
+</html>
