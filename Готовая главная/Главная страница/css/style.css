@@ -680,7 +680,7 @@ font-weight: bold;
 
 /* button puzz*/
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
