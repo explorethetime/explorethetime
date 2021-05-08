@@ -681,6 +681,7 @@ font-weight: bold;
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
+	margin-left: 20%;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
