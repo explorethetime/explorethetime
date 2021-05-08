@@ -1,0 +1,427 @@
+html {
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+html body {
+  background: url(img/bg.jpg);
+  background-size: contain;
+  margin: 0;
+
+}
+
+body *, html * {
+  box-sizing: border-box;
+    
+}
+
+.header1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+}
+.header {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/*Фиксация----------------------------------------*/
+
+.menu
+{
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+   
+}
+.butt_m,
+.butt_r,
+.butt_p,
+.butt_t,
+.butt_a,
+.butt_c
+{
+     width: 100%;
+  height: 7%;
+  z-index: 1000; 
+ font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 230%;
+text-align: center;
+color: rgba(255, 255, 255, 0.88);
+    text-decoration: none; 
+    display: flex;
+    top: 25%;
+}
+/*Ссылка "Главная"----------------------------------------*/
+.butt_m::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_m::before,
+.butt_m::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_m:hover {
+  font-weight: bold;
+}
+
+.butt_m
+{
+    position: absolute;
+width: 11%;
+left: 10%;
+top: 25%; 
+
+
+}
+
+/*Ссылка "Рейтинг"---------------------------------------*/
+.butt_r::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_r::before,
+.butt_r::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_r:hover {
+  font-weight: bold;
+}
+
+.butt_r
+{
+    position: absolute;
+width: 11%;
+left: 25.8%;
+top: 25%;
+
+}
+
+/*Ссылка "Пазлы"---------------------------------------*/
+.butt_p::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_p::before,
+.butt_p::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_p:hover {
+  font-weight: bold;
+}
+
+
+.butt_p
+{
+    position: absolute;
+width: 10%;
+left: 40.5%;
+top: 25%;
+}
+
+ /*Ссылка "Тесты"*/
+.butt_t::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_t::before,
+.butt_t::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_t:hover 
+{
+  font-weight: bold;
+}
+
+
+.butt_t
+{
+    position: absolute;
+width: 11%;
+left: 52.5%;
+top: 25%;
+}
+
+/*Ссылка "О нас"---------------------------------------*/
+.butt_a::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_a::before,
+.butt_a::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_a:hover 
+{
+  font-weight: bold;
+}
+
+.butt_a
+{
+    position: absolute;
+width: 11%;
+left: 65%;
+top: 25%;
+}
+
+/*Ссылка "Контакты"-----------------------------------*/
+.butt_c::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_c::before,
+.butt_c::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_c:hover {
+  font-weight: bold;
+}
+
+.butt_c
+{
+    position: absolute;
+width: 11%;
+left: 79%;
+top: 25%;
+}
+
+.container {
+    width: 100%;
+  padding: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 4%;
+  margin-top: 50px;
+}
+.rating_shell {
+  width: 100%;
+  display: flex;
+  margin-bottom: 9%;
+}
+
+
+.rating__image img {
+    margin-left: 25%;
+  max-height: 498px;
+}
+
+.rating__info {
+  padding-left: 15%;
+}
+
+.rating___topic {
+  margin-top: -3%;
+  font-family: EB Garamond;
+  font-size: 5.2857rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 7%;
+  padding-right: 2%;
+text-decoration: none;
+    color: white;
+}
+
+
+.rating___topic:hover{
+    color: rgba(141, 11, 35, 0.88);
+}
+
+.mark___title {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+
+.mark___line {
+  margin-top: 1.5%;
+  height: 8px;
+  max-width: 570px;
+  width: 570px;
+  background: #C4C4C4;
+  border-radius: 40px;
+}
+
+.progress_line {
+  height: 8px;
+  max-width: 570px;
+  width: 0px;
+  background: #8D0B23;
+  border-radius: 40px;
+}
+
+.mark {
+  color: rgba(255, 255, 255, 0.88);
+  font-family: Play;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 64px;
+}
+@media (max-width: 1170px) {
+    .rating_shell{
+        width: 10%;
+    }
+    .rating___topic {
+         font-size: 3.5rem;
+        line-height: 55px;
+        width: 300%;
+        height: 100px;
+    }
+    .mark___title {
+        font-size: 30px;
+}
+    .mark {
+        font-size: 40px;
+    }
+    .mark___line {
+        width: 320px;
+    }
+     .rating__info {
+        padding-left: 200%; 
+    }
+    }
+.poisk_mark {
+  padding-left: 29px;
+}
+
+.imdb_mark {
+  padding-left: 146px;
+}
+
+.mark___title {
+  white-space: nowrap;
+}
+
+.second___mark {
+  padding-top: 6%;
+}
+.bg2 {
+background: url("img/fon3.png");
+width: 100%;  
+background-size: cover;
+padding: 50px 0;
+
+}
+
+.line3{
+position: absolute;
+width: 45%;
+margin-top: -4%;
+right: 0;
+}
+
+.media {
+width: 100%;  
+display: flex;
+justify-content: center;
+    margin: auto;
+
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+color: #FFFFFF;
+}
+.q {
+width: 100%;
+display: flex;
+justify-content: center;
+    margin: 10px auto;
+
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+text-align: center;
+color: #FFFFFF;
+}
+.contacts{
+display: flex;
+justify-content: space-around;
+width: 100%;
+max-width: 500px;
+margin: 40px auto;
+
+}
+.inst:hover {
+  filter: drop-shadow(0px 0px 20px #FEF8F8);    
+}
+.tg:hover {
+     filter: drop-shadow(0px 0px 20px #FEF8F8); 
+}
+.vk:hover {
+     filter: drop-shadow(0px 0px 20px #FEF8F8); 
+}
+.right_line{
+ width: 33%;
+}
+.right_line_bg{
+width: 100%;
+background: rgba(0, 0, 0, 1);
+ margin: 0;
+display: flex;
+    justify-content: flex-end;
+}
+
+.scrollup{
+width: 10%;
+max-width: 60px;
+position: fixed;  
+height: 10%; 
+right: 10%;
+bottom: 5%;
+    z-index: 200;
+}
