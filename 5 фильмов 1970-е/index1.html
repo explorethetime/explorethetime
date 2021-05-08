@@ -4,6 +4,7 @@
     <meta charset="utf-8">
         <link rel="stylesheet" href="style1.css">      
         <title>5 фильмов</title>
+	    <link rel="icon" href="img/mask.png" type="image/x-icon"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>
 $(function() {
@@ -240,6 +241,11 @@ color: rgba(255, 255, 255, 0.88);
 .butt_c:hover {
   font-weight: bold;
 }
+		.picture{
+		max-width: 450px;
+			min-width: 450px;
+			margin-left: 10%;
+		}
 .bg_transparent{
     width: 100%;
     height: 440px;
@@ -311,7 +317,7 @@ flex-direction: column;
 justify-content: space-between;
 padding: 2%;
 }
-.h1{
+.h1, a {
 font-family: Garamond;
 font-style: normal;
 font-weight: bold;
@@ -582,6 +588,7 @@ height: 5vw;
 @media (max-width: 1100px){
     .picture{
       max-width: 350px;
+	    min-width: 350px;
       max-height: 550px;
     }
     .main_background1{
@@ -674,10 +681,10 @@ menuBurger.addClass('open');
            <div class="main_background1"> <!-- Секция с фоном-->
                 <img class="backg1" src="img/5%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2.png"><!-- Картинка с перьями-->
                <div class="main_block">
-                    <img class="picture" src="img/unnamed.jpg">  <!-- Постер-->
+		       <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D1%80%D0%BE%D0%BD%D0%B8%D1%8F%20%D1%81%D1%83%D0%B4%D1%8C%D0%B1%D1%8B,%20%D0%B8%D0%BB%D0%B8%20%D0%A1%20%D0%BB%D1%91%D0%B3%D0%BA%D0%B8%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BC!/index.html"> <img class="picture" src="img/unnamed.jpg">  </a> <!-- Постер-->
                         <div class="text"> <!-- Текст-->
-                                      <div class="h1"> <!-- Заголовок фильма-->
-                                          Ирония судьбы, или С лёгким паром!
+                                      <div class="h1"> <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D1%80%D0%BE%D0%BD%D0%B8%D1%8F%20%D1%81%D1%83%D0%B4%D1%8C%D0%B1%D1%8B,%20%D0%B8%D0%BB%D0%B8%20%D0%A1%20%D0%BB%D1%91%D0%B3%D0%BA%D0%B8%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BC!/index.html"> <!-- Заголовок фильма-->
+					      Ирония судьбы, или С лёгким паром! </a>
                             </div>
                                       <div class="main_text"> <!-- Главный текст-->
                                           31 декабря Женя Лукашин и его друзья по традиции пошли попариться в баню. Они выпивают и по ошибке отправляют Женю в ...
@@ -699,10 +706,10 @@ menuBurger.addClass('open');
           <div class="main_background1"> <!-- Секция с фоном-->
                 <img class="backg1" src="img/5%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2.png"><!-- Картинка с перьями-->
                <div class="main_block">
-                    <img class="picture" src="img/2113ec02fb836150cd9f7b11303326.jpg">  <!-- Постер-->
+                     <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%AD%D0%BA%D0%B8%D0%BF%D0%B0%D0%B6/index.html"> <img class="picture" src="img/2113ec02fb836150cd9f7b11303326.jpg"> </a> <!-- Постер-->
                         <div class="text"> <!-- Текст-->
-                                      <div class="h1"> <!-- Заголовок фильма-->
-                                          Экипаж
+                                      <div class="h1"> <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%AD%D0%BA%D0%B8%D0%BF%D0%B0%D0%B6/index.html"> <!-- Заголовок фильма-->
+					      Экипаж </a>
                             </div>
                                       <div class="main_text"> <!-- Главный текст-->
                                            Экипаж самолета, перевозящего грузы и пассажиров, попадает в ситуацию, по сравнению, с которой конец света может показаться детской забавой... В аэропорту, в котором приземлился самолет ...                           </div>
@@ -722,10 +729,10 @@ menuBurger.addClass('open');
           <div class="main_background1"> <!-- Секция с фоном-->
                 <img class="backg1" src="img/5%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2.png"><!-- Картинка с перьями-->
                <div class="main_block">
-                    <img class="picture" src="img/1cf8c51f505b3b1c64a8eb8d0f3025.jpg">  <!-- Постер-->
+                  <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D0%B2%D0%B0%D0%BD%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%20%D0%BC%D0%B5%D0%BD%D1%8F%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D1%8E/index.html">  <img class="picture" src="img/1cf8c51f505b3b1c64a8eb8d0f3025.jpg"> </a>  <!-- Постер-->
                         <div class="text"> <!-- Текст-->
-                                      <div class="h1"> <!-- Заголовок фильма-->
-                                         Иван Васильевич меняет профессию
+                                      <div class="h1"> <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D0%B2%D0%B0%D0%BD%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%20%D0%BC%D0%B5%D0%BD%D1%8F%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D1%8E/index.html"> <!-- Заголовок фильма-->
+					      Иван Васильевич меняет профессию </a>
                             </div>
                                       <div class="main_text"> <!-- Главный текст-->
                                            Инженер-изобретатель Тимофеев сконструировал машину времени, которая соединила его квартиру с далеким шестнадцатым веком - точнее, с палатами государя Ивана Грозного. Туда-то и попадают ...                       </div>
@@ -746,10 +753,10 @@ menuBurger.addClass('open');
         <div class="main_background1"> <!-- Секция с фоном-->
                 <img class="backg1" src="img/5%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2.png"><!-- Картинка с перьями-->
                <div class="main_block">
-                    <img class="picture" src="img/600x900.jfif">  <!-- Постер-->
+		       <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%90%20%D0%B7%D0%BE%D1%80%D0%B8%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%20%D1%82%D0%B8%D1%85%D0%B8%D0%B5/index.html"> <img class="picture" src="img/600x900.jfif">  </a> <!-- Постер-->
                         <div class="text"> <!-- Текст-->
-                                      <div class="h1"> <!-- Заголовок фильма-->
-                                         ...А зори здесь тихие
+                                      <div class="h1"> <a href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%90%20%D0%B7%D0%BE%D1%80%D0%B8%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%20%D1%82%D0%B8%D1%85%D0%B8%D0%B5/index.html"> <!-- Заголовок фильма-->
+					      ...А зори здесь тихие </a>
                             </div>
                                       <div class="main_text"> <!-- Главный текст-->
                                            В прифронтовой полосе группа девушек-зенитчиц вынуждена вступить в неравный бой с вражескими десантниками. Эти девчонки мечтали о большой любви, нежности, семейном тепле - но ...       </div>
@@ -769,10 +776,10 @@ menuBurger.addClass('open');
          <div class="main_background1"> <!-- Секция с фоном-->
                 <img class="backg1" src="img/5%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2.png"><!-- Картинка с перьями-->
                <div class="main_block">
-                    <img class="picture" src="img/e5934de8927e963ab8391daba10d78.jpg">  <!-- Постер-->
+                  <a href="http://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%BC%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D1%80%D0%B8%D1%82/index.html">  <img class="picture" src="img/e5934de8927e963ab8391daba10d78.jpg">  </a> <!-- Постер-->
                         <div class="text"> <!-- Текст-->
-                                      <div class="h1"> <!-- Заголовок фильма-->
-                                         Москва слезам не верит
+                                      <div class="h1"> <a href="http://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%BC%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D1%80%D0%B8%D1%82/index.html"> <!-- Заголовок фильма-->
+					      Москва слезам не верит </a>
                             </div>
                                       <div class="main_text"> <!-- Главный текст-->
                                            Москва пятидесятых годов. Три молодые провинциалки приезжают в Москву в поисках того, что ищут люди во всех столицах мира - любви, счастья и достатка. Их судьбы складываются именно так, как ...</div>
@@ -793,9 +800,9 @@ menuBurger.addClass('open');
      <div class="media">КОНТАКТЫ</div>
    <div class="q">Остались вопросы? Свяжись с нами.</div>
          <div class="contacts">
-            <a href="www.instagram.com" target="_blank"><img class="inst" src="img/%D0%98%D0%BD%D1%81%D1%82.svg"></a> 
-            <a href="" target="_blank"><img class="tg" src="img/%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D0%B0.svg"></a>
-            <a href="" target="_blank"><img class="vk" src="img/vk-social-logotype%201.svg"></a>
+            <a href="instagram.com/explore_the_time/?igshid=6x90uwrzps1z" target="_blank"><img class="inst" src="img/%D0%98%D0%BD%D1%81%D1%82.svg"></a> 
+            <a href="https://t.me/explore_the_time" target="_blank"><img class="tg" src="img/%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D0%B0.svg"></a>
+            <a href="https://vk.com/club203725152" target="_blank"><img class="vk" src="img/vk-social-logotype%201.svg"></a>
             </div>
             <div>
             <img class="scrollup" src="img/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0.svg">
