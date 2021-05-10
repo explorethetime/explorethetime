@@ -689,7 +689,7 @@ font-weight: bold;
 
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+/*.dropdown-content {
     display: none;
 position: absolute;
     margin-left: 17%;
@@ -697,10 +697,10 @@ position: absolute;
     min-width: 320px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
+} */
 
 /* Links inside the dropdown */
-.dropdown-content a {
+/*.dropdown-content a {
  font-family: 'Play', sans-serif;
 	text-align: center;
     color: white;
@@ -710,17 +710,17 @@ position: absolute;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+/*.dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+/*.dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+/*.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content1 {
+/*.dropdown-content1 {
       display: none;
 position: absolute;
     margin-top: -5%;
@@ -732,7 +732,7 @@ position: absolute;
 }
 
 /* Links inside the dropdown */
-.dropdown-content1 a {
+/*.dropdown-content1 a {
  font-family: 'Play', sans-serif;
 	text-align: center;
     color: white;
@@ -742,14 +742,14 @@ position: absolute;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content1 a:hover {background-color: #ddd;}
+/* .dropdown-content1 a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
-.dropdown1:hover .dropdown-content1 {display: block;}
+/* .dropdown1:hover .dropdown-content1 {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown1:hover .dropbtn {background-color: #3e8e41;}
-
+/* .dropdown1:hover .dropbtn {background-color: #3e8e41;}
+*/
 
 
 
