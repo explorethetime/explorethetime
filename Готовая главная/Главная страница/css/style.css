@@ -1516,7 +1516,58 @@ bottom: 10px;
 
 
 
+.down_arrow{
+max-width: 20px;
+margin: 0 2%;
+    }
 
+
+    .accordeon,
+.accordeon ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordeon li {
+	margin: 0 0 2px 0;
+	padding: 0 65px;
+    text-align: left;
+    
+}
+
+.accordeon > li > a {
+	color: #333;
+	display: block;
+	font-weight: 700;
+      font-family: 'Play', sans-serif;
+	height: 35px;
+	line-height: 50px;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.accordeon > li.slide > a,
+.accordeon > li.active > a {
+	color: #FFF;
+
+}
+.accordeon > li > ul {
+	display: none;
+	width: 100%;
+	padding: 10px 8px;
+    margin: 100px;
+}
+.accordeon > li.active > ul {
+	display: block;
+}
+
+.accordeon > li > ul > li {
+	padding: 5px 0;
+	text-decoration: none;
+	display: block;
+	color: #333;
+}
 
 
 
