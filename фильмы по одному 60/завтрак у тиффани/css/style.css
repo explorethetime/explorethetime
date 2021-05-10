@@ -1209,7 +1209,7 @@ margin-top: 63.5vw;
 
 .media {
 position: absolute;
-width: 105vw;
+width: 100vw;
 display: flex;
 justify-content: center;
     margin-top: 65vw;
@@ -1298,7 +1298,7 @@ z-index: 200;
 	position: absolute;
     top: 310vw;
     object-position: center;
-    width: 105vw;
+    width: 100vw;
 }
 
 .bodies{
@@ -1311,7 +1311,7 @@ z-index: 200;
 	position: relative;
 	padding: 0vw;
     top: 105vw;
-    width: 105vw;
+    width: 100vw;
     margin-right: 7.5vw;
 }
 
@@ -1355,7 +1355,7 @@ z-index: 200;
 	position: absolute;
     top: 310vw;
     object-position: center;
-    width: 105vw;
+    width: 100vw;
 }
 
 .bodies{
@@ -1368,7 +1368,7 @@ z-index: 200;
 	position: relative;
 	padding: 0vw;
     top: 105vw;
-    width: 105vw;
+    width: 100vw;
     margin-right: 11.5vw;
 }
 }
@@ -1469,7 +1469,7 @@ width: 30vw;
 top: 0;
 opacity: 0.85;
 z-index: 100;
-right: -105vw;
+right: -100vw;
 transition: 0.35s;
 }
 
@@ -1518,7 +1518,7 @@ transition: 0.25s;
 }
 
 #overlay-menu nav ul li a:hover:after {
-width: 105vw;
+width: 100vw;
 }
 }
 
@@ -1527,7 +1527,7 @@ width: 105vw;
 	position: absolute;
     top: 310vw;
     object-position: center;
-    width: 105vw;
+    width: 100vw;
 }
 
 .bodies{
@@ -1540,7 +1540,7 @@ width: 105vw;
 	position: relative;
 	padding: 0vw;
     top: 105vw;
-    width: 105vw;
+    width: 100vw;
     margin-right: 17vw;
 }
 
@@ -1590,14 +1590,14 @@ width: 105vw;
 
 .bodies{
 	height: 30vw;
-	width: 105vw;
+	width: 100vw;
     }
 
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 105vw;
-    width: 105vw;
+    top: 100vw;
+    width: 100vw;
     margin-right: 3vw;
 }
 
@@ -1727,6 +1727,6 @@ transition: 0.25s;
 }
 
 #overlay-menu nav ul li a:hover:after {
-width: 105vw;
+width: 100vw;
 }
 }
