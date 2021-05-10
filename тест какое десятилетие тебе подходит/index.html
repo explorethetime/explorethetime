@@ -42,37 +42,68 @@ $(function() {
         <div class="site-header"></div>
         <h1>Какое десятилетие тебе подходит?</h1>
         <main>
-                    <div class="menu">
-                    
-         <a class="butt_m" href="buttom_main.html">Главная</a> 
-                            
-            <a class="butt_r" href="button_rating.html">Рейтинг</a> 
+                    <nav>
+  <ul class="menu">
+      <li><a href="#" class="butt_m">Главная</a></li>
+      <li><a href="#" class="butt_r">Рейтинг</a></li>
+      <li><a href="#" class="butt_p">Пазлы<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="#">Актёры</a></li>
+        <li><a href="#">Кадры из фильма</a></li>
+        <li><a href="#">Мультфильмы</a></li>
+        <li><a href="#">Фильмы</a></li>
+
+      </ul>
+    </li>
+      <li><a href="#" class="butt_t">Тесты<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="#">Выбери себе фильм на вечер</a></li>
+        <li><a href="#">Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href="#">Какое десятилетие тебе подходит?</a></li>
+        <li><a href="#">Кто ты из героев фильмов?</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#" class="butt_a">О нас</a></li>
+    <li><a href="#" class="butt_c">Контакты</a></li>
+  </ul>
+</nav>
             
-            <a class="butt_p" href="button_puzzle.html">Пазлы</a> 
-                            
-           <a class="butt_t" href="button_tests.html">Тесты</a> 
-                            
-          <a class="butt_a" href="button_about.html">О нас</a> 
-                            
-            <a class="butt_c" href="button_contacts.html">Контакты</a> 
-        </div>
+
             
-            
-            
- <div id="menu-burger">
+   <div id="menu-burger">
   <span class="menu-icon"></span>
 </div>
 
 <div id="overlay-menu">
 <nav role='navigation'>
-     <ul>            
+     <ul class="accordeon">            
          <li><a href="buttom_main.html">Главная</a> </li>
                             
             <li><a href="button_rating.html">Рейтинг</a>  </li>
             
-            <li><a href="button_puzzle.html">Пазлы</a> </li>
+            <li class="active"><a href="button_puzzle.html">Пазлы <img class="down_arrow" src="img/down-arrow.png"></a>
+                <ul style="display: none">
+
+        
+                    <li> <a href="#">Актёры </a> </li>
+                    <li> <a href="#">Кадры из фильма</a></li>
+                    <li><a href="#">Мультфильмы</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                
+                </ul>
+    
+         </li>
                             
-            <li><a href="button_tests.html">Тесты</a>  </li>
+            <li><a href="button_tests.html">Тесты <img class="down_arrow" src="img/down-arrow.png"></a> 
+            <ul style="display: none">
+
+                    <li><a href="#">Выбери себе фильм на вечер</a></li>
+                    <li><a href="#">Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="#">Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="#">Кто ты из героев фильмов?</a></li>
+                </ul>
+         </li>
                             
             <li><a href="button_about.html">О нас</a>  </li>
                             
@@ -82,7 +113,6 @@ $(function() {
             </div>
             
             
-  
 
       <script id="rendered-js" >
 $('#menu-burger').click(function () {
@@ -94,14 +124,41 @@ $('#menu-burger').click(function () {
     overlayMenu.removeClass('open');
     menuIconLines.removeClass('open');
     menuBurger.removeClass('open');
-  } else {overlayMenu.addClass('open');
+    
+  } 
+    else {overlayMenu.addClass('open');
     menuIconLines.addClass('open');
     menuBurger.addClass('open');
   };
 
 
 });
-    </script> 
+    </script>  
+            
+            <script>
+                $(".accordeon > li > a").click(function (e) {
+	e.preventDefault();
+	
+	var menu = $(this).closest('.accordeon');
+	
+	if (false == $(this).next().is(':visible')) {
+		menu.find('li').removeClass('slide active');
+		menu.find('ul').slideUp();
+	}
+	
+	$(this).next().slideToggle();
+	$(this).parent().addClass('slide');
+});
+            </script>
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div class="question"></div>
             <ul class="answer"></ul>
             </main>
