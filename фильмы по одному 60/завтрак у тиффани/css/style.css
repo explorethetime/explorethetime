@@ -703,7 +703,7 @@ body{
 }
 
 .header {
-    width: 105vw;
+    width: 100vw;
     height: 12.63vw;
     background: url('../img/header_dackground.png');
     background-position: center;
