@@ -10,28 +10,29 @@
     <title>Quiz</title>
     <link rel="icon" href="images/mask.png" type="image/x-icon">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script>
+          <script>
 $(function() {
   menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
   $(window).scroll(function (){
     if ($(window).scrollTop() > menu_top) {
-      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') != 'fixed') {
-        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','fixed');
+      if ($('.menu').css('position') != 'fixed') {
+        $('.menu').css('position','fixed');
+          $('.menu').css('margin','0 auto');
         $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
            $('.menu').css('background','rgba(0, 0, 0, 0.6)');
-        $('.content').css('margin-top','20%');
+        $('.content').css('margin-top','10%');
       }
     } else {
-      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') == 'fixed') {
-        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+      if ($('.menu').css('position') == 'fixed') {
+     $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
         $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
-          $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+          $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
         $('.content').css('margin-top','');
       }
     }
   });
 });
-</script>
+        </script>
 </head>
 
 <body>
@@ -39,10 +40,7 @@ $(function() {
 <img class="header" src="../тест какое десятилетие тебе подходит/images/group2.png">
         <div class="line"></div>
     <div class="container">
-        <div class="site-header"></div>
-        <h1>Какое десятилетие тебе подходит?</h1>
-        <main>
-                      <nav>
+	      <nav>
   <ul class="menu">
       <li><a href="" class="butt_m">Главная</a></li>
       <li><a href="" class="butt_r">Рейтинг</a></li>
@@ -69,9 +67,9 @@ $(function() {
   </ul>
 </nav>
             
-
             
-   <div id="menu-burger">
+            
+ <div id="menu-burger">
   <span class="menu-icon"></span>
 </div>
 
@@ -111,27 +109,23 @@ $(function() {
                 </ul>
             </nav>
             </div>
-
-      <script id="rendered-js" >
+	     <script id="rendered-js" >
 $('#menu-burger').click(function () {
-  var overlayMenu = $('#overlay-menu'),
-  menuIconLines = $('#menu-burger .menu-icon'),
-  menuBurger = $('#menu-burger');
+var overlayMenu = $('#overlay-menu'),
+menuIconLines = $('#menu-burger .menu-icon'),
+menuBurger = $('#menu-burger');
 
-  if (overlayMenu.hasClass('open')) {
-    overlayMenu.removeClass('open');
-    menuIconLines.removeClass('open');
-    menuBurger.removeClass('open');
-    
-  } 
-    else {overlayMenu.addClass('open');
-    menuIconLines.addClass('open');
-    menuBurger.addClass('open');
-  };
-
-
+if (overlayMenu.hasClass('open')) {
+overlayMenu.removeClass('open');
+menuIconLines.removeClass('open');
+menuBurger.removeClass('open');
+} else {overlayMenu.addClass('open');
+menuIconLines.addClass('open');
+menuBurger.addClass('open');
+};
 });
-    </script> 
+</script> 
+            
                 <script>
                 $(".accordeon > li > a").click(function (e) {
 	e.preventDefault();
@@ -147,13 +141,11 @@ $('#menu-burger').click(function () {
 	$(this).parent().addClass('slide');
 });
             </script>
-            
-            
-            
-            
-            
-            
-            
+	    	    	    	    	    
+	    
+        <div class="site-header"></div>
+        <h1>Какое десятилетие тебе подходит?</h1>
+        <main>
             
             <div class="question"></div>
             <ul class="answer"></ul>
