@@ -27,10 +27,12 @@ backk {
 
 .menu
 {
-  width: 100%;
-  height: 7%;
-  z-index: 10;
-   
+    width: 100%;
+    height: 40px; 
+    z-index: 50;
+    margin: 0 auto;
+    display: flex;
+justify-content: space-around;
 }
 .butt_m,
 .butt_r,
@@ -39,18 +41,68 @@ backk {
 .butt_a,
 .butt_c
 {
-     width: 100%;
-  height: 7%;
-  z-index: 1000; 
- font-family: 'Play', sans-serif;
+  
+font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 230%;
+font-size: 40px;
 text-align: center;
 color: rgba(255, 255, 255, 0.88);
-    text-decoration: none; 
-    display: flex;
-    top: 27%;
+text-decoration: none; 
+}
+
+
+
+nav {
+    width: 90%;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu:after {
+  content: "";
+  display: none;}
+.menu > li {
+margin: -5px;
+  float: left;
+  position: relative;
+  font-family: 'Play', sans-serif;
+}
+.menu > li > a {
+  text-transform: uppercase;
+  font-size: 2.1vw;
+  color: white;
+}
+.menu li a:hover { color: white; 
+font-weight: bold;}
+.submenu-link:after {
+  font-family: 'Play', sans-serif;
+  color: inherit;
+}
+.submenu {
+  background: rgba(141, 11, 35, 0.8);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 200px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 20px;
+margin: 10px 0;
+}
+.submenu li:last-child a { border-bottom: none; }
+.menu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
 }
 /*Ссылка "Главная"----------------------------------------*/
 .butt_m::after {
@@ -381,6 +433,61 @@ a {
 #overlay-menu nav ul li a:hover:after {
   width: 100%;
 }
+
+
+
+
+.accordeon,
+.accordeon ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordeon li {
+	margin: 0 0 2px 0;
+	padding: 0 65px;
+    text-align: left;
+    
+}
+
+.accordeon > li > a {
+	color: #333;
+	display: block;
+	font-weight: 700;
+      font-family: 'Play', sans-serif;
+	height: 35px;
+	line-height: 50px;
+	padding: 0 5%;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 100%;
+}
+.accordeon > li.slide > a,
+.accordeon > li.active > a {
+	color: #FFF;
+
+}
+.accordeon > li > ul {
+	display: none;
+	width: 100%;
+	padding: 10px 0;
+    margin: 100px;
+}
+.accordeon > li.active > ul {
+	display: block;
+}
+
+.accordeon > li > ul > li {
+	padding: 10px 30px;
+	text-decoration: none;
+	display: block;
+	color: #333;
+}
+.down_arrow{
+max-width: 20px;
+margin: 0 2%;
+}
+
 
 @media (min-width: 1170px){
     #menu-burger{
