@@ -35,14 +35,16 @@ body *, html * {
 
 
 
-/*Фиксация----------------------------------------*/
 
+/*Фиксация----------------------------------------*/
 .menu
 {
-  width: 100%;
-  height: 7%;
-  z-index: 10;
-   
+    width: 100%;
+    height: 60px; 
+    z-index: 50;
+    margin: 0 auto;
+    display: flex;
+justify-content: space-around;
 }
 .butt_m,
 .butt_r,
@@ -51,19 +53,70 @@ body *, html * {
 .butt_a,
 .butt_c
 {
-     width: 100%;
-  height: 7%;
-  z-index: 1000; 
- font-family: 'Play', sans-serif;
+  
+font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 230%;
+font-size: 40px;
 text-align: center;
 color: rgba(255, 255, 255, 0.88);
-    text-decoration: none; 
-    display: flex;
-    top: 27%;
+text-decoration: none; 
 }
+
+/*НАВИГАЦИЯ С ВЫЛЕТАЮЩИМ МЕНЮ*/
+nav {
+    width: 100%;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.menu:after {
+  content: "";
+  display: none;}
+.menu > li {
+margin: -5px;
+  float: left;
+  position: relative;
+  font-family: 'Play', sans-serif;
+}
+.menu > li > a {
+  text-transform: uppercase;
+  font-size: 2.1vw;
+  color: white;
+}
+.menu li a:hover { color: white; 
+font-weight: bold;}
+.submenu-link:after {
+  font-family: 'Play', sans-serif;
+  color: inherit;
+}
+.submenu {
+  background: rgba(141, 11, 35, 0.8);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 200px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 20px;
+margin: 10px 0;
+}
+.submenu li:last-child a { border-bottom: none; }
+.menu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/*    КОНЕЦ НАВИГАЦИИ С ВЫПЛЫВАЮЩИМ МЕНЮ*/
 /*Ссылка "Главная"----------------------------------------*/
 .butt_m::after {
   -webkit-transition: all 0.3s;
@@ -84,15 +137,7 @@ color: rgba(255, 255, 255, 0.88);
   font-weight: bold;
 }
 
-.butt_m
-{
-    position: absolute;
-width: 11%;
-left: 10%;
-top: 30%; 
 
-
-}
 
 /*Ссылка "Рейтинг"---------------------------------------*/
 .butt_r::after {
@@ -114,14 +159,6 @@ top: 30%;
   font-weight: bold;
 }
 
-.butt_r
-{
-    position: absolute;
-width: 11%;
-left: 25.8%;
-top: 30%;
-
-}
 
 /*Ссылка "Пазлы"---------------------------------------*/
 .butt_p::after {
@@ -144,13 +181,7 @@ top: 30%;
 }
 
 
-.butt_p
-{
-    position: absolute;
-width: 10%;
-left: 40.5%;
-top: 30%;
-}
+
 
  /*Ссылка "Тесты"*/
 .butt_t::after 
@@ -175,13 +206,7 @@ top: 30%;
 }
 
 
-.butt_t
-{
-    position: absolute;
-width: 11%;
-left: 52.5%;
-top: 30%;
-}
+
 
 /*Ссылка "О нас"---------------------------------------*/
 .butt_a::after 
@@ -205,13 +230,7 @@ top: 30%;
   font-weight: bold;
 }
 
-.butt_a
-{
-    position: absolute;
-width: 11%;
-left: 65%;
-top: 30%;
-}
+
 
 /*Ссылка "Контакты"-----------------------------------*/
 .butt_c::after 
@@ -233,15 +252,6 @@ top: 30%;
 .butt_c:hover {
   font-weight: bold;
 }
-
-.butt_c
-{
-    position: absolute;
-width: 11%;
-left: 79%;
-top: 30%;
-}
-
 
 /*Лучшие фильмы разных времен-----------------------------*/
 .text
