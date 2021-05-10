@@ -695,7 +695,7 @@ body{
 }
 
 .background{
-    width: 105vw;
+    width: 100vw;
     background: url('../img/bgmain.jpg');
     background-size: cover;
     background-repeat: no-repeat;
