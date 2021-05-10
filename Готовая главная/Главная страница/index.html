@@ -37,37 +37,70 @@ $(function() {
         <div class="backk"> 
 <img class="header" src="img/group2.png">
         <div class="line"></div>
-        <div class="menu">
-                    
-         <a class="butt_m" href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html">Главная</a> 
-                            
-            <a class="butt_r" href="https://explorethetime.github.io/рейтинг/index.html">Рейтинг</a> 
-            
-            <a class="butt_p" href="button_puzzle.html">Пазлы</a> 
-                            
-           <a class="butt_t" href="button_tests.html">Тесты</a> 
-                            
-          <a class="butt_a" href="#onas">О нас</a> 
-                            
-            <a class="butt_c" href="#media">Контакты</a> 
-        </div>
             
             
-            
+               <nav>
+  <ul class="menu">
+      <li><a href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html" class="butt_m">Главная</a></li>
+      <li><a href="" class="butt_r">Рейтинг</a></li>
+      <li><a href="" class="butt_p">Пазлы<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="">Актёры</a></li>
+        <li><a href="">Кадры из фильма</a></li>
+        <li><a href="">Мультфильмы</a></li>
+        <li><a href="">Фильмы</a></li>
+
+      </ul>
+    </li>
+      <li><a href="" class="butt_t">Тесты<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="">Выбери себе фильм на вечер</a></li>
+        <li><a href="">Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href="">Какое десятилетие тебе подходит?</a></li>
+        <li><a href="">Кто ты из героев фильмов?</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#onas" class="butt_a">О нас</a></li>
+    <li><a href="#media" class="butt_c">Контакты</a></li>
+  </ul>
+</nav>
+<!--        Конец навигации с вылетающим меню-->
+
+<!--        ВЫПЛЫВАЮЩЕЕ МЕНЮ-БУРГЕР-->
  <div id="menu-burger">
   <span class="menu-icon"></span>
 </div>
 
 <div id="overlay-menu">
 <nav role='navigation'>
-     <ul>            
-         <li><a href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html">Главная</a> </li>
+     <ul class="accordeon">            
+         <li><a href="buttom_main.html">Главная</a> </li>
                             
-            <li><a href="https://explorethetime.github.io/рейтинг/index.html">Рейтинг</a>  </li>
+            <li><a href="button_rating.html">Рейтинг</a>  </li>
             
-            <li><a href="button_puzzle.html">Пазлы</a> </li>
+            <li class="active"><a href="button_puzzle.html">Пазлы <img class="down_arrow" src="img/down-arrow.png"></a>
+                <ul style="display: none">
+
+        
+                    <li> <a href="#">Актёры </a> </li>
+                    <li> <a href="#">Кадры из фильма</a></li>
+                    <li><a href="#">Мультфильмы</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                
+                </ul>
+    
+         </li>
                             
-            <li><a href="button_tests.html">Тесты</a>  </li>
+            <li><a href="button_tests.html">Тесты <img class="down_arrow" src="img/down-arrow.png"></a> 
+            <ul style="display: none">
+
+                    <li><a href="#">Выбери себе фильм на вечер</a></li>
+                    <li><a href="#">Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="#">Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="#">Кто ты из героев фильмов?</a></li>
+                </ul>
+         </li>
                             
             <li><a href="#onas">О нас</a>  </li>
                             
@@ -75,6 +108,9 @@ $(function() {
                 </ul>
             </nav>
             </div>
+            
+            
+      
             
             
   
