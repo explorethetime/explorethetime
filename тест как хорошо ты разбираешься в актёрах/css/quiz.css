@@ -379,7 +379,7 @@ color: #fff;
 
 }
 .down_arrow{
-max-width: 20px;
+max-width: 23px;
 margin: 0 2%;
     }
 
@@ -392,7 +392,7 @@ margin: 0 2%;
 }
 .accordeon li {
 	margin: 0 0 2px 0;
-	padding: 0 65px;
+	padding: 0 50px;
     text-align: left;
     
 }
@@ -408,6 +408,7 @@ margin: 0 2%;
 	text-decoration: none;
 	vertical-align: top;
 	width: 100%;
+	margin-bottom: 20%;
 }
 .accordeon > li.slide > a,
 .accordeon > li.active > a {
@@ -471,7 +472,7 @@ text-decoration: none;
 background: rgba(141, 11, 35, 0.88);
 border-radius: 30vw;
 position: fixed;
-margin:-8vw 92.5vw;
+margin:-12vw 95vw;
 cursor: pointer;
 z-index: 200;
 }
@@ -600,7 +601,7 @@ margin: 0 30%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 18px;
+font-size: 30px;
 margin-bottom: 4px;
 }
 }
@@ -623,7 +624,7 @@ margin: 0 30%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 15px;
+font-size: 30px;
 margin-bottom: 5px;
 }
 }
@@ -654,11 +655,11 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 13px;
+font-size: 30px;
 }
     .accordeon li {
     margin: 0 0 2px 0;
-    padding: 0 10px;
+    padding: 0 50px;
     text-align: left;
 }
     }
@@ -675,11 +676,11 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 12px;
+font-size: 30px;
 margin-bottom: 3px;
 }
     .down_arrow{
-max-width: 8px;
+max-width: 23px;
 margin: 3%  2%;
     }
 }
@@ -696,15 +697,15 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 10px;
-margin-bottom: 0%;
+font-size: 30px;
+margin-bottom: 15%;
 }
 #overlay-menu nav ul {
     margin: -10%;
         height: 0%;
     }
     .down_arrow{
-max-width: 8px;
+max-width: 23px;
 margin: 3%  2%;
     }
     }
