@@ -1048,7 +1048,7 @@ color: #FFFFFF;
 }
 
 .bg_transparenta{
-    width: 105vw;
+    width: 100vw;
     height: 43.75vw;
     background: url('../img/Rectangle%2015.png');
     margin: 0;
@@ -1056,7 +1056,7 @@ color: #FFFFFF;
 }
 
 .bg_transparent{
-    width: 105vw;
+    width: 100vw;
     height: 43.75vw;
     background: url('../img/background_poster.jpg');
     background-size: cover;
