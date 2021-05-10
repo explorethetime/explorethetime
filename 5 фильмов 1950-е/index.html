@@ -20,7 +20,7 @@ $(function() {
       }
     } else {
       if ($('.menu').css('position') == 'fixed') {
-        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+     $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
         $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
           $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
         $('.content').css('margin-top','');
@@ -78,35 +78,89 @@ return false;
 
 
 
-/*Фиксация----------------------------------------*/
+/*‘иксаци€----------------------------------------*/
 
 .menu
 {
-  width: 100%;
-max-width: 2000px;
-  height: 60px; 
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+    height: 60px; 
     z-index: 50;
+    margin: 0 auto;
+    display: flex;
+justify-content: space-around;
 }
-
-
 .butt_m,
 .butt_r,
 .butt_p,
 .butt_t,
 .butt_a,
 .butt_c
-{  
+{
+  
 font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 40px;
 text-align: center;
 color: rgba(255, 255, 255, 0.88);
-    text-decoration: none; 
+text-decoration: none; 
 }
-/*Ссылка "Главная"----------------------------------------*/
+
+/*Ќј¬»√ј÷»я — ¬џЋ≈“јёў»ћ ћ≈Ќё*/
+nav {
+    width: 100%;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.menu:after {
+  content: "";
+  display: none;}
+.menu > li {
+margin: -5px;
+  float: left;
+  position: relative;
+  font-family: 'Play', sans-serif;
+}
+.menu > li > a {
+  text-transform: uppercase;
+  font-size: 2.1vw;
+  color: white;
+}
+.menu li a:hover { color: white; 
+font-weight: bold;}
+.submenu-link:after {
+  font-family: 'Play', sans-serif;
+  color: inherit;
+}
+.submenu {
+  background: rgba(141, 11, 35, 0.8);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 200px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 20px;
+margin: 10px 0;
+}
+.submenu li:last-child a { border-bottom: none; }
+.menu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+        
+/*     ќЌ≈÷ Ќј¬»√ј÷»» — ¬џѕЋџ¬јёў»ћ ћ≈Ќё*/
+/*—сылка "√лавна€"----------------------------------------*/
 .butt_m::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -128,7 +182,7 @@ color: rgba(255, 255, 255, 0.88);
 
 
 
-/*Ссылка "Рейтинг"---------------------------------------*/
+/*—сылка "–ейтинг"---------------------------------------*/
 .butt_r::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -149,7 +203,7 @@ color: rgba(255, 255, 255, 0.88);
 }
 
 
-/*Ссылка "Пазлы"---------------------------------------*/
+/*—сылка "ѕазлы"---------------------------------------*/
 .butt_p::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -172,7 +226,7 @@ color: rgba(255, 255, 255, 0.88);
 
 
 
- /*Ссылка "Тесты"*/
+ /*—сылка "“есты"*/
 .butt_t::after 
 {
   -webkit-transition: all 0.3s;
@@ -197,7 +251,7 @@ color: rgba(255, 255, 255, 0.88);
 
 
 
-/*Ссылка "О нас"---------------------------------------*/
+/*—сылка "ќ нас"---------------------------------------*/
 .butt_a::after 
 {
   -webkit-transition: all 0.3s;
@@ -221,7 +275,7 @@ color: rgba(255, 255, 255, 0.88);
 
 
 
-/*Ссылка "Контакты"-----------------------------------*/
+/*—сылка " онтакты"-----------------------------------*/
 .butt_c::after 
 {
   -webkit-transition: all 0.3s;
@@ -255,14 +309,11 @@ color: rgba(255, 255, 255, 0.88);
     display: flex;
     justify-content: space-around;
 }
-		
 		.picture{
-		 max-width: 450px;
+		max-width: 450px;
 			min-width: 450px;
 			margin-left: 10%;
-		}		
-		
-
+		}
 .year{
 font-family: Play;
 font-style: normal;
@@ -318,20 +369,20 @@ max-height: 600px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-padding: 2%;
+padding: 0 7%;
 }
-.h1, a {
+.h1{
 font-family: Garamond;
 font-style: normal;
 font-weight: bold;
 font-size: 80px;
-color: white;
+
+color: #FFFFFF;
 
 }
-.h1, a:hover{
+.h1:hover{
     color: rgba(141, 11, 35, 0.88);
 }
-		
 .main_text{
 font-family: Play;
 font-style: normal;
@@ -441,27 +492,31 @@ box-sizing: border-box;
 
 a {
 text-decoration: none;
+	
 }
-
+/*    ћ≈Ќё-Ѕ”–√≈–*/
 #menu-burger {
-background: rgba(141, 11, 35, 0.88);
-border-radius: 50%;
-position: fixed;
-margin:-10% 90%;
-cursor: pointer;
-z-index: 200;
+ width: 60px;
+  height: 60px;
+  background: rgba(141, 11, 35, 0.88);
+  border-radius: 50%;
+  position: fixed;
+  margin-top: -9%;
+  left: -5%;
+    cursor: pointer;
+  z-index: 200;
 }
 
 #menu-burger .menu-icon {
-display: block;
-height: 2px;
-width: 20px;
-background: #fff;
-position: absolute;
-top: 50%;
-left: 50%;
-margin-left: -9px;
-margin-top: -1px;
+ display: block;
+  height: 2px;
+  width: 20px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -9px;
+  margin-top: -1px;
 }
 
 #menu-burger .menu-icon:after {
@@ -520,7 +575,7 @@ width: 30%;
 top: 0;
 opacity: 0.85;
 z-index: 100;
-right: -100%;
+right: -100vw;
 transition: 0.35s;
 }
 
@@ -534,14 +589,15 @@ position: relative;
 top: 50%;
 left: 0;
 transform: translateY(-50%);
-font-size: 32px;
+font-size: 31px;
 text-align: center;
+
 }
 
 #overlay-menu nav ul {
+margin: 10%;
+height: 0;
 display: inline-block;
-margin: auto;
-height: 100%;
 }
 
 #overlay-menu nav ul li {
@@ -555,52 +611,507 @@ list-style-type: none
 color: #fff;
 
 }
+.down_arrow{
+max-width: 20px;
+margin: 0 2%;
+    }
 
-#overlay-menu nav ul li a:after {
-content: ' ';
-display: block;
-position: absolute;
-top: 100%;
-left: 0;
-height: 3px;
-width: 0%;
-background: #fff;
-transition: 0.25s;
+
+    .accordeon,
+.accordeon ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordeon li {
+	margin: 0 0 2px 0;
+	padding: 0 65px;
+    text-align: left;
+    
 }
 
-#overlay-menu nav ul li a:hover:after {
-width: 100%;
+.accordeon > li > a {
+	color: #333;
+	display: block;
+	font-weight: 700;
+      font-family: 'Play', sans-serif;
+	height: 35px;
+	line-height: 50px;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.accordeon > li.slide > a,
+.accordeon > li.active > a {
+	color: #FFF;
+
+}
+.accordeon > li > ul {
+	display: none;
+	width: 100%;
+	padding: 0;
+    margin: 10px;
+}
+.accordeon > li.active > ul {
+	display: block;
 }
 
-@media (min-width: 1170px){
-#menu-burger{
-display: none;
+.accordeon > li > ul > li {
+	padding: 5px 0;
+	text-decoration: none;
+	display: block;
+	color: #333;
 }
+    @media (min-width: 1170px){
+    #menu-burger{
+        display: none;
+    }
 }
 @media (max-width: 1170px){
+    .menu{
+        display: none;
+    }
+    #menu-burger{
+        display: inline-block;
+        width: 5vw;
+        height: 5vw;
+     
+    }
+}
+/* ќЌ≈÷ ћ≈Ќё-Ѕ”–√≈–ј*/
+            /*ћ≈ƒ»ј-«јѕ–ќ—џ ƒЋя Ѕ”–√≈–ј ƒќ  ќЌ÷ј*/
+@media only screen and (max-device-width:1280px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 112.7vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 11.5vw; 
+}
+}
+
+@media only screen and (max-device-width: 1200px){
 .menu{
 display: none;
 }
+
 #menu-burger{
 display: inline-block;
 width: 5vw;
 height: 5vw;
+}
+    
+* {
+box-sizing: border-box;
+}
 
+a {
+text-decoration: none;
 }
-} 
-@media (max-width: 1100px){
-    .picture{
-      max-width: 350px;
-	    min-width: 350px
-      max-height: 550px;
+
+#menu-burger {
+background: rgba(141, 11, 35, 0.88);
+border-radius: 30vw;
+position: fixed;
+margin:-15vw 95vw;
+cursor: pointer;
+z-index: 200;
+}
+
+#menu-burger .menu-icon {
+display: block;
+height: 0.16vw;
+width: 1.57vw;
+background: #fff;
+position: absolute;
+top: 2.3vw;
+left: 2.45vw;
+margin-left: -0.58vw;
+margin-top: 0vw;
+}
+
+#menu-burger .menu-icon:after {
+content: '';
+display: block;
+height: 0.16vw;
+width: 1.5vw;
+background: #fff;
+position: absolute;
+top: 0.1vw;
+left: 0.6vw;
+margin-left: -0.56vw;
+margin-top: -0.38vw;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon:before {
+content: ' ';
+display: block;
+height: 0.16vw;
+width: 1.5vw;
+background: #fff;
+position: absolute;
+top: 0.1vw;
+left: 0.6vw;
+margin-left: -0.56vw;
+margin-top: 0.22vw;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon.open:before{
+transform: rotate(45deg);
+margin-top: -0.06vw;
+background: #000;
+}
+
+#menu-burger .menu-icon.open:after{
+transform: rotate(-45deg);
+margin-top: -0.06vw;
+background: #000;
+}
+
+#menu-burger.open {
+background: #fff;
+}
+
+#menu-burger .menu-icon.open {
+background: #fff;
+}
+
+#overlay-menu {
+position: fixed;
+background: rgba(141, 11, 35, 0.88);
+height: 100%;
+width: 30vw;
+top: 0;
+opacity: 0.85;
+z-index: 100;
+right: -100vw;
+transition: 0.35s;
+}
+
+#overlay-menu.open {
+right: 0vw;
+}
+
+#overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: -35%;
+transform: translateY(-55%);
+text-align: justify;
+margin: 0 35%;
+}
+
+#overlay-menu nav ul {
+margin: auto;
+height: 0%;
+}
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 25px;
+margin-bottom: 0;
+}
+
+#overlay-menu nav ul li a {
+color: #fff;
+}
+}
+.down_arrow{
+max-width: 10px;
+margin: 3%  2%;
     }
-    .main_background1{
-height: 980px;
+@media only screen and (max-device-width:1024px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
 }
-    .backg1{
-     max-width: 400px;   
+
+.bodies{
+	height: 48vw;
+	width: 118vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 17vw; 
+}
+    
+.slider__item img{
+	width: 30vw;
+    height: 37vw;
+    padding-left: 2vw;
+}
+    #overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: -30%;
+transform: translateY(-55%);
+text-align: justify;
+margin: 0 30%;
+}
+
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 20px;
+margin-bottom: 4
+    px;
+}
+}
+
+@media only screen and (max-device-width:767px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 109vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 3vw; 
+}
+    
+.slider__item img{
+	width: 33vw;
+    height: 38vw;
+    padding-left: 1vw;
+}
+
+#overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 55vw;
+left: -7%;
+transform: translateY(-55%);
+text-align: justify;
+margin: 0 20%;
+}
+
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 20px;
+margin-bottom: 5%;
+}
+    .accordeon li {
+    margin: 0 2px 0;
+    padding: 0 30px;
+    text-align: left;
+}
+
+@media only screen and (max-device-width:548px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 100vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 3vw; 
+}
+    
+.slider__item img{
+	width: 36vw;
+    height: 39vw;
+}
+
+    .slider__item {
+        padding-left: 20vw;
+    }
+    
+#overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: -30%;
+transform: translateY(-50%);
+text-align: justify;
+margin: 0 35%;
+}
+#overlay-menu nav ul li {
+font-size: 30px;
+}
+}
+
+@media only screen and (max-device-width:450px) {
+    .slider__item {
+    padding-left: 19vw;
+    }
+    
+    .slider .slick-dots li{
+	list-style: none;
+	margin: -3vw 1vw;    
+}
+    #overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: 7%;
+transform: translateY(-50%);
+text-align: justify;
+margin: 0;
+}
+#overlay-menu nav ul li {
+font-size: 30px;
+}
+    .accordeon li {
+    margin: 0 0 2px 0;
+    padding: 0 10px;
+    text-align: left;
+}
+    .accordeon > li > a {
+    margin: 10% 0;
+            }
+@media only screen and (max-device-width:400px) {
+    .slider__item {
+    padding-left: 17vw;
+    }
+    
+    .slider .slick-dots li{
+	list-style: none;
+	margin: -3vw 1vw;    
+}
+    
+.slider .slick-dots button{
+	font-size: 0;
+	width: 1vw;
+	height: 3vw;
+	background-color: #fff;
+	border-radius: 50%;  
+}  
+     #overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: 7%;
+transform: translateY(-50%);
+text-align: justify;
+margin: 0;
+}
+#overlay-menu nav ul li {
+font-size: 30px;
+margin: 10% 0;
+}
+    .down_arrow{
+max-width: 15px;
+margin: 3%  2%;
     }
 }
+
+@media only screen and (max-device-width:320px) {
+.slider__item img{
+	width: 32vw;
+    height: 39vw;
+}
+    
+.slider__item {
+    padding-left: 16.5vw;
+    }
+
+.slider .slick-dots{
+	display: flex;
+    margin-left: -10vw;
+}
+
+ .slider .slick-dots li{
+	list-style: none;
+	margin: -5vw 1vw;    
+}
+
+.slider .slick-dots button{
+	font-size: 0;
+	width: 1vw;
+	height: 3vw;
+	background-color: #fff;
+	border-radius: 50%;  
+}  
+    
+.slider .slick-arrow.slick-prev{
+	left: 5vw;
+    top: 24vw;
+	background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+    width: 1vw;
+    height: 8vw;
+}
+.slider .slick-arrow.slick-next{
+	right: 5vw;
+    top: 24vw;
+	background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+     width: 1vw;
+    height: 8vw;
+}
+ #overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: 12%;
+transform: translateY(-50%);
+text-align: justify;
+margin: 5%;
+}
+#overlay-menu nav ul li {
+font-size: 30px;
+margin: 20% 10%;
+}
+#overlay-menu nav ul {
+    margin: -5%;
+        height: 0%;
+    }
+    .down_arrow{
+max-width: 15px;
+margin: 3%  2%;
+    }
+    }
         </style>
         
         
@@ -608,50 +1119,85 @@ height: 980px;
         
     </head>
     <body>
+        
         <div class="background">
         <header class="header">
+            
             <div class="header_inner">
                
             </div>
         </header>
-                <div class="menu">
-        
-            <a class="butt_m" href="buttom_main.html">Главная</a> 
-                            
-             <a class="butt_r" href="button_rating.html">Рейтинг</a>  
-            
-            <a class="butt_p" href="button_puzzle.html">Пазлы</a>
-                            
-            <a class="butt_t" href="button_tests.html">Тесты</a> 
-                            
-            <a class="butt_a" href="button_about.html">О нас</a> 
-                            
-            <a class="butt_c" href="button_contacts.html">Контакты</a> 
+               
 
-        </div> 
-            
-<div id="menu-burger">
-<span class="menu-icon"></span>
+            <nav>
+  <ul class="menu">
+      <li><a href="" class="butt_m">Главная</a></li>
+      <li><a href="" class="butt_r">Рейтинг</a></li>
+      <li><a href="" class="butt_p">Пазлы<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="">Актёры</a></li>
+        <li><a href=""> Кадры из фильма</a></li>
+        <li><a href="">Мультфильмы</a></li>
+        <li><a href="">Фильмы</a></li>
+
+      </ul>
+    </li>
+      <li><a href="" class="butt_t">Тесты<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="">Выбери себе фильм на вечер</a></li>
+        <li><a href=""> Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href=""> Какое десятилетие тебе подходит?</a></li>
+        <li><a href=""> Кто ты из героев фильмов?</a></li>
+
+      </ul>
+    </li>
+    <li><a href="" class="butt_a">О нас</a></li>
+    <li><a href="" class="butt_c"> Контакты</a></li>
+  </ul>
+</nav>
+
+ <div id="menu-burger">
+  <span class="menu-icon"></span>
 </div>
 
 <div id="overlay-menu">
 <nav role='navigation'>
-<ul>
-<li><a href="buttom_main.html">Главная</a> </li>
+     <ul class="accordeon">            
+         <li><a href="buttom_main.html">Главная</a> </li>
+                            
+            <li><a href="button_rating.html">Рейтинг</a>  </li>
+            
+            <li class="active"><a href="button_puzzle.html">Пазлы <img class="down_arrow" src="img/down-arrow.png"></a>
+                <ul style="display: none">
 
-<li><a href="button_rating.html">Рейтинг</a> </li>
+        
+                    <li> <a href="#">Актёры </a> </li>
+                    <li> <a href="#"> Кадры из фильма</a></li>
+                    <li><a href="#">Мультфильмы</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                
+                </ul>
+    
+         </li>
+                            
+            <li><a href="button_tests.html">Тесты <img class="down_arrow" src="img/down-arrow.png"></a> 
+            <ul style="display: none">
 
-<li><a href="button_puzzle.html">Пазлы</a> </li>
+                    <li><a href="#">Выбери себе фильм на вечер</a></li>
+                    <li><a href="#"> Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="#"> Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="#"> Кто ты из героев фильмов?</a></li>
+                </ul>
+         </li>
+                            
+            <li><a href="button_about.html">О нас</a>  </li>
+                            
+            <li><a href="button_contacts.html">Контакты</a>  </li>
+                </ul>
+            </nav>
+            </div>
 
-<li><a href="button_tests.html">Тесты</a> </li>
-
-<li><a href="button_about.html">О нас</a> </li>
-
-<li><a href="button_contacts.html">Контакты</a> </li>
-</ul>
-</nav>
-</div>
-               <script id="rendered-js" >
+    <script id="rendered-js" >
 $('#menu-burger').click(function () {
 var overlayMenu = $('#overlay-menu'),
 menuIconLines = $('#menu-burger .menu-icon'),
@@ -665,9 +1211,24 @@ menuBurger.removeClass('open');
 menuIconLines.addClass('open');
 menuBurger.addClass('open');
 };
-
 });
-</script>     
+</script> 
+            
+                <script>
+                $(".accordeon > li > a").click(function (e) {
+	e.preventDefault();
+	
+	var menu = $(this).closest('.accordeon');
+	
+	if (false == $(this).next().is(':visible')) {
+		menu.find('li').removeClass('slide active');
+		menu.find('ul').slideUp();
+	}
+	
+	$(this).next().slideToggle();
+	$(this).parent().addClass('slide');
+});
+            </script>
             
             <div class="bg_transparent">
             <div class="bg_transparent_inner">
