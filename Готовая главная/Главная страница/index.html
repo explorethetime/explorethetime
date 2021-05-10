@@ -37,9 +37,7 @@ $(function() {
         <div class="backk"> 
 <img class="header" src="img/group2.png">
         <div class="line"></div>
-            
-            
-               <nav>
+        <nav>
   <ul class="menu">
       <li><a href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html" class="butt_m">Главная</a></li>
       <li><a href="" class="butt_r">Рейтинг</a></li>
@@ -61,8 +59,8 @@ $(function() {
 
       </ul>
     </li>
-    <li><a href="#onas" class="butt_a">О нас</a></li>
-    <li><a href="#media" class="butt_c">Контакты</a></li>
+    <li><a href="" class="butt_a">О нас</a></li>
+    <li><a href="" class="butt_c">Контакты</a></li>
   </ul>
 </nav>
 <!--        Конец навигации с вылетающим меню-->
@@ -102,38 +100,48 @@ $(function() {
                 </ul>
          </li>
                             
-            <li><a href="#onas">О нас</a>  </li>
+            <li><a href="button_about.html">О нас</a>  </li>
                             
-            <li><a href="#media">Контакты</a>  </li>
+            <li><a href="button_contacts.html">Контакты</a>  </li>
                 </ul>
             </nav>
             </div>
             
+    <script id="rendered-js" >
+$('#menu-burger').click(function () {
+var overlayMenu = $('#overlay-menu'),
+menuIconLines = $('#menu-burger .menu-icon'),
+menuBurger = $('#menu-burger');
+
+if (overlayMenu.hasClass('open')) {
+overlayMenu.removeClass('open');
+menuIconLines.removeClass('open');
+menuBurger.removeClass('open');
+} else {overlayMenu.addClass('open');
+menuIconLines.addClass('open');
+menuBurger.addClass('open');
+};
+});
+</script> 
             
-      
-            
+                <script>
+                $(".accordeon > li > a").click(function (e) {
+	e.preventDefault();
+	
+	var menu = $(this).closest('.accordeon');
+	
+	if (false == $(this).next().is(':visible')) {
+		menu.find('li').removeClass('slide active');
+		menu.find('ul').slideUp();
+	}
+	
+	$(this).next().slideToggle();
+	$(this).parent().addClass('slide');
+});
+            </script>
             
   
 
-      <script id="rendered-js" >
-$('#menu-burger').click(function () {
-  var overlayMenu = $('#overlay-menu'),
-  menuIconLines = $('#menu-burger .menu-icon'),
-  menuBurger = $('#menu-burger');
-
-  if (overlayMenu.hasClass('open')) {
-    overlayMenu.removeClass('open');
-    menuIconLines.removeClass('open');
-    menuBurger.removeClass('open');
-  } else {overlayMenu.addClass('open');
-    menuIconLines.addClass('open');
-    menuBurger.addClass('open');
-  };
-
-
-});
-    </script>    
-            
             
         <div class="content">
             <h1 class="text">Лучшие фильмы разных времен</h1>
@@ -153,7 +161,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item" >
               <div class="slider_item1">
-                  <a href="https://explorethetime.github.io/5 фильмов 1940-е/index.html">
+                  <a href="slide1.html">
                       
                   <img src="img/grozdjagneva.png" alt="">
                   </a>
@@ -164,7 +172,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item">
              <div class="slider_item2">
-            <a href="https://explorethetime.github.io/5 фильмов 1950-е/index.html">
+            <a href="slide2.html">
              <img src="img/lady.jpg"  alt="">
                  </a>
              </div>
@@ -174,7 +182,7 @@ $('#menu-burger').click(function () {
          
           <div class="slider_item">
               <div class="slider_item3">
-            <a href="https://explorethetime.github.io/инфа 60х/index1.html">
+            <a href="slide3.html">
             <img src="img/zavtrak.jpg" alt="">
              </a>
          </div>
@@ -184,7 +192,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item">
              <div class="slider_item4">
-                 <a href="https://explorethetime.github.io/5 фильмов 1970-е/index1.html">
+                 <a href="slide4.html">
              <img src="img/moskva.jpg" alt="">
                  </a>
          </div>
@@ -194,7 +202,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item">
              <div class="slider_item5">
-                 <a href="https://explorethetime.github.io/80-e/index1.html">
+                 <a href="slide5.html">
              <img  src="img/batman.jpg" alt="">
                  </a>
          </div>
@@ -204,7 +212,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item">
              <div class="slider_item6">
-                 <a href="https://explorethetime.github.io/5 фильмов 1990-е/index.html">
+                 <a href="slide6.html">
              <img  src="img/pobeg.jpg" alt="">
                  </a>
          </div>
@@ -214,7 +222,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item"> 
              <div class="slider_item7">
-                 <a href="https://explorethetime.github.io/5 фильмов 2000-е/index1.html">
+                 <a href="slide7.html">
              <img src="img/harry.jpg" alt="">
                  </a>
          </div>
@@ -224,7 +232,7 @@ $('#menu-burger').click(function () {
          
          <div class="slider_item">
              <div class="slider_item8">
-                 <a href="explorethetime.github.io/5 фильмов 2010-е/index.html">
+                 <a href="slide8.html">
              <img src="img/1.jpg" alt="">
                  </a>
          </div>
@@ -301,19 +309,19 @@ $('#menu-burger').click(function () {
             <area shape="rect" coords="90, 270, 290, 470" href="https://explorethetime.github.io/пазл мультфильмы/index.html" alt="3">
             <area shape="poly" coords="330, 400, 500, 300, 600, 470, 440, 580" href="https://explorethetime.github.io/пазл фильмы/index.html" alt="4">
         </map>
-            <div class="dropdown">
+                 <div class="dropdown">
                
     <button class="bn">Перейти к пазлам</button>
-  
-                <div class="dropdown-content">
+                     <div class="dropdown-content">
     <a href="https://explorethetime.github.io/пазл актёры/index.html">Актёры</a>
     <a href="https://explorethetime.github.io/пазл кадры из фильма/index.html">Кадры из фильма</a>
     <a href="https://explorethetime.github.io/пазл мультфильмы/index.html">Мультфильмы</a>
     <a href="https://explorethetime.github.io/пазл фильмы/index.html">Фильмы</a>
   </div>
 </div>
+            </div>
             <div class="rectangle02"> </div>
-        </div>
+       
         
         
         
@@ -333,30 +341,38 @@ $('#menu-burger').click(function () {
       
         <p1 class="p1"> Определить, какой фильм посмотреть вечером, узнать, как хорошо Вы разбираетесь в актёрах, а также многое другое помогут наши тесты.</p1>
 <div class="corner6"></div>
+            </div>
+       <div class="dropdown1">
+    <button class="six">Перейти к тестам</button>
+          <div class="dropdown-content1">
+    <a href="https://explorethetime.github.io/тест выбери себе фильм на вечер/index.html">Выбери себе фильм на вечер</a>
+    <a href="https://explorethetime.github.io/тест как хорошо ты разбираешься в актёрах/index.html">Как хорошо ты разбираешься в актёрах?</a>
+    <a href="https://explorethetime.github.io/тест какое десятилетие тебе подходит/index.html">Какое десятилетие тебе подходит?</a>
+    <a href="https://explorethetime.github.io/тест кто ты из героев фильмов/index.html">Кто ты из героев фильмов</a>
+  </div>
+            </div>
+        </div>
         
         
-        
-      
          
        
         
         <img class="bg" src="img/bgmain1.png">
         <img class="line06" src="img/aline.png">
      <img class="bg2" src="img/fon31.png">
-        <div class="box"><a name="onas"></a>
+        <div class="box">
            <div class="corner7"></div>
      <div class=h106>О нас</div>
-            
 <p class="text17">Explore the time - это не просто сайт с фильмами, а сайт, заходя на который, ты погружаешься в удивительный мир кинематографа. Целью нашей команды было создание полезного ресурса, который поможет тебе узнать много нового и интересного об истории кино. Теперь у тебя есть +1 тема для разговора, и ты сможешь с лёгкостью обсуждать не только погоду. Мы надеемся, что тебе понравится!</p>
        <div class="corner8"></div>
        <img class="img" src="img/photo1.png">
         </div>
        ;
-     <h1 class="media"><a name="media"></a>КОНТАКТЫ</h1>
+     <h1 class="media">КОНТАКТЫ</h1>
    <p class="q">Остались вопросы? Свяжись с нами.</p>
-   <a href="https://www.instagram.com/explore_the_time/?igshid=6x90uwrzps1z" target="_blank"><img class="inst" src="img/inst.svg"></a> 
-     <a href="https://t.me/explore_the_time" target="_blank"><img class="tel" src="img/telegram.svg"></a>
-     <a href="https://vk.com/club203725152" target="_blank"><img class="vko" src="img/vk.svg"></a>
+   <a href="www.instagram.com" target="_blank"><img class="inst" src="img/inst.svg"></a> 
+     <a href="" target="_blank"><img class="tel" src="img/telegram.svg"></a>
+     <a href="" target="_blank"><img class="vko" src="img/vk.svg"></a>
         
         <img class="line07" src="img/aline2.png">
      
