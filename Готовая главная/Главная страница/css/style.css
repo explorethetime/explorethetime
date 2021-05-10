@@ -767,7 +767,7 @@ p {
 
 h3 {
     font-size: 66px;
-    margin-top: -13%;
+    margin-top: -11%;
 }
 
 .corner3{
@@ -885,9 +885,7 @@ float: right;
 
 
 .rectangle05{
-  box-sizing: content-box;
-    word-wrap: normal;
-    width: 35%;
+  
     margin-top: 12%;
     margin-left: 54%;
     padding: 4%;
@@ -908,7 +906,7 @@ float: right;
   background-size: contain;
   height: 135px;
 margin-left: -10%;
-    margin-top: -20%;
+    margin-top: -15%;
 }
 
 .p {
@@ -936,6 +934,7 @@ color: rgba(255, 255, 255, 0.91);
     position: relative;
     margin-left: 61%;
     margin-top: 2.5%;
+margin-bottom: 5%;
     filter: drop-shadow(0px 9px 15px rgba(219, 38, 38, 0.7));
     background: black;
 border: 1px solid #000000;
@@ -1028,7 +1027,7 @@ margin-top: 50%;
   position: absolute;
 width: 70%;
 margin-left: 7%;
-margin-top: -10%;
+margin-top: -6%;
 font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: bold;
@@ -1042,7 +1041,7 @@ position: absolute;
 width: 80%;
 
 margin-left: 7%;   
-margin-top: -2%;  
+margin-top: 2%;  
 text-align: left;
 
 font-family: 'Play', sans-serif;
@@ -1058,7 +1057,7 @@ color: rgba(255, 255, 255, 0.91);
   background-size: contain;
   height: 135px;
  margin-left: 79%;
-    margin-top: -176%;
+    margin-top: -173%;
     
 }
 
