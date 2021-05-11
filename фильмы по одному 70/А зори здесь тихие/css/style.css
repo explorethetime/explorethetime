@@ -1617,7 +1617,7 @@ margin: 0 20%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 25px;
+font-size: 20px;
 margin-bottom: 10%;
 }
     
@@ -1625,7 +1625,7 @@ margin-bottom: 10%;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     display: block;
     padding: 0 15px;
     font-weight: 700;
@@ -1839,6 +1839,6 @@ margin: 10% 0%;
         height: 0%;
     }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 7%  -3%;
     }
