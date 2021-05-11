@@ -1700,7 +1700,7 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 20px;
 	margin: 20% 0;
     
 }
@@ -1709,7 +1709,7 @@ font-size: 30px;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 20px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -1757,7 +1757,7 @@ margin: 20% 0;
     
 }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 3%  2%;
     }
 }
@@ -1814,7 +1814,7 @@ text-align: justify;
 margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 10px;
 margin: 20% 0%;
     
 }
