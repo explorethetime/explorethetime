@@ -786,7 +786,7 @@ color: #fff;
 }
 .down_arrow{
 max-width: 20px;
-margin: 0 2%;
+margin: 3% 2%;
     }
 
 
@@ -823,8 +823,8 @@ margin: 0 2%;
 .accordeon > li > ul {
 	display: none;
 	width: 100%;
-	padding: 10px 8px;
-    margin: 100px;
+	padding: 0;
+    margin: 10px;
 }
 .accordeon > li.active > ul {
 	display: block;
@@ -852,6 +852,7 @@ margin: 0 2%;
      
     }
 }
+
 /*КОНЕЦ МЕНЮ-БУРГЕРА*/
 
 */
@@ -1353,6 +1354,7 @@ z-index: 200;
 }
 
 /*МЕДИА-ЗАПРОСЫ ДЛЯ БУРГЕРА ДО КОНЦА*/
+
 @media only screen and (max-device-width:1280px) {
    .slider {
 	position: absolute;
@@ -1399,7 +1401,7 @@ text-decoration: none;
 background: rgba(141, 11, 35, 0.88);
 border-radius: 30vw;
 position: fixed;
-margin:-8vw 92.5vw;
+margin:-13vw 103vw;
 cursor: pointer;
 z-index: 200;
 }
@@ -1467,7 +1469,7 @@ background: #fff;
 #overlay-menu {
 position: fixed;
 background: rgba(141, 11, 35, 0.88);
-height: 100vh;
+height: 100%;
 width: 30vw;
 top: 0;
 opacity: 0.85;
@@ -1499,7 +1501,7 @@ height: 0%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 20px;
+font-size: 25px;
 margin-bottom: 0;
 }
 
@@ -1553,9 +1555,20 @@ margin: 0 30%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 18px;
-margin-bottom: 4px;
+font-size: 25px;
+margin-bottom: 20px;
 }
+    a.bu{
+       position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 25px;
+display: inline-block;
+        padding: 0 65px;
+        font-weight: 700;
+        font-family: 'Play', sans-serif;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-device-width:767px) {
@@ -1589,11 +1602,11 @@ margin-bottom: 4px;
 #overlay-menu nav {
 height: 70vw;
 position: relative;
-top: 50vw;
-left: -30%;
-transform: translateY(-53%);
+top: 55vw;
+left: -7%;
+transform: translateY(-55%);
 text-align: justify;
-margin: 0 30%;
+margin: 0 20%;
 }
 
 
@@ -1601,9 +1614,27 @@ margin: 0 30%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 15px;
-margin-bottom: 5px;
+font-size: 20px;
+margin-bottom: 20%;
 }
+    
+     a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 30px;
+    display: block;
+    padding: 0 15px;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+    margin-bottom: 20%;
+    margin-left: 0;
+    }
+    .accordeon li {
+    margin: 0 2px 0;
+    padding: 0 10px;
+    text-align: left;
 }
 
 @media only screen and (max-device-width:548px) {
@@ -1640,12 +1671,15 @@ margin-bottom: 5px;
 height: 70vw;
 position: relative;
 top: 50vw;
-left: -50%;
+left: -30%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0 35%;
 }
-
+#overlay-menu nav ul li {
+font-size: 30px;
+}
+   
 }
 
 @media only screen and (max-device-width:450px) {
@@ -1661,20 +1695,37 @@ margin: 0 35%;
 height: 70vw;
 position: relative;
 top: 50vw;
-left: 10%;
+left: 7%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 13px;
+font-size: 30px;
+	margin: 20% 0;
+    
 }
+    
+       a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 30px;
+    display: block;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+   
+    margin: 20% 0;
+    }
     .accordeon li {
     margin: 0 0 2px 0;
     padding: 0 10px;
     text-align: left;
 }
-
+    .accordeon > li > a {
+    margin: 10% 0;
+            }
 @media only screen and (max-device-width:400px) {
     .slider__item {
     padding-left: 17vw;
@@ -1696,17 +1747,18 @@ font-size: 13px;
 height: 70vw;
 position: relative;
 top: 50vw;
-left: 10%;
+left: 7%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 12px;
-margin-bottom: 3px;
+font-size: 30px;
+margin: 20% 0;
+    
 }
     .down_arrow{
-max-width: 8px;
+max-width: 15px;
 margin: 3%  2%;
     }
 }
@@ -1754,23 +1806,37 @@ margin: 3%  2%;
     height: 8vw;
 }
  #overlay-menu nav {
-height: 70vw;
+height: 50vw;
 position: relative;
 top: 50vw;
 left: 12%;
 transform: translateY(-50%);
 text-align: justify;
-margin: 0;
+margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 10px;
-margin-bottom: 0%;
+font-size: 30px;
+margin: 20% 0%;
+    
 }
+       a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 30px;
+    display: block;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+   
+    margin: 10% 0%;
+    }
 #overlay-menu nav ul {
-    margin: -10%;
+    margin: -5%;
         height: 0%;
     }
     .down_arrow{
-max-width: 8px;
-margin: 3%  2%;
+max-width: 15px;
+margin: 7%  -3%;
+    }
     }
