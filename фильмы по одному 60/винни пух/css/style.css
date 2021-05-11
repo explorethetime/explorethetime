@@ -98,11 +98,9 @@ font-family: 'Play', sans-serif;
 
 .menu > li > a {
 
-text-transform: uppercase;
+  font-size: 40px;
 
-font-size: 2.1vw;
-
-color: white;
+  color: rgba(255, 255, 255, 0.88);
 
 }
 
