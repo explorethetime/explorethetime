@@ -1,4 +1,9 @@
-
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222;
+}
 
  .clearfix {
      display: block;
@@ -6,9 +11,8 @@
  }
 
  h1 {
-      font-family: 'Play', sans-serif;
      text-align: center;
-     font-size: 70px;
+     font-size: 32px;
      margin: 50px 0 40px 0;
  }
 
@@ -32,23 +36,20 @@
 }
 
 .question {
-     font-family: 'Play', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
     margin: 20px 0 20px 50px;
     color: #fff;
 }
 
 .answer {
-     font-family: 'Play', sans-serif;
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
-    color: black;
+    color: #fff;
 }
 
 .answer li {
-    font-size: 20px;
     background: #f1f1f1;
     margin: 5px;
     padding: 10px;
@@ -67,7 +68,7 @@
 
 .result {
     padding: 30px 0;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 150%;
     color: #fff;
     margin: 0 50px;
@@ -88,7 +89,7 @@
     padding: 10px 25px;
     min-width: 200px;
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
 }
 
