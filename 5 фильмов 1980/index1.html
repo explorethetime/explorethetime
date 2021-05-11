@@ -2,9 +2,9 @@
 <html>
     <head>
     <meta charset="utf-8">
-        <link rel="stylesheet" href="style1.css">      
+        <link rel="stylesheet" href="style1.css">   
+	  <link rel="icon" href="img/mask.png" type="image/x-icon"> 
         <title>5 фильмов</title>
-	     <link rel="icon" href="img/mask.png" type="image/x-icon"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>
 $(function() {
@@ -75,13 +75,10 @@ return false;
     margin: 0 20px;
     display: flex;
 }
-		a{
-		color: white;
-		}
 
 
 
-/*‘иксаци€----------------------------------------*/
+/*Фиксация----------------------------------------*/
 
 .menu
 {
@@ -107,6 +104,7 @@ text-align: center;
 color: rgba(255, 255, 255, 0.88);
 text-decoration: none; 
 }
+/*            Выплывающее меню*/
 nav {
     width: 100%;
 
@@ -161,9 +159,8 @@ margin: 100px 0;
   opacity: 1;
   transform: scaleY(1);
 }
-        
-/*     ќЌ≈÷ Ќј¬»√ј÷»» — ¬џѕЋџ¬јёў»ћ ћ≈Ќё*/
-/*—сылка "√лавна€"----------------------------------------*/
+/*    КОНЕЦ НАВИГАЦИИ С ВЫПЛЫВАЮЩИМ МЕНЮ*/
+/*Ссылка "Главная"----------------------------------------*/
 .butt_m::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -185,7 +182,7 @@ margin: 100px 0;
 
 
 
-/*—сылка "–ейтинг"---------------------------------------*/
+/*Ссылка "Рейтинг"---------------------------------------*/
 .butt_r::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -206,7 +203,7 @@ margin: 100px 0;
 }
 
 
-/*—сылка "ѕазлы"---------------------------------------*/
+/*Ссылка "Пазлы"---------------------------------------*/
 .butt_p::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -229,7 +226,7 @@ margin: 100px 0;
 
 
 
- /*—сылка "“есты"*/
+ /*Ссылка "Тесты"*/
 .butt_t::after 
 {
   -webkit-transition: all 0.3s;
@@ -254,7 +251,7 @@ margin: 100px 0;
 
 
 
-/*—сылка "ќ нас"---------------------------------------*/
+/*Ссылка "О нас"---------------------------------------*/
 .butt_a::after 
 {
   -webkit-transition: all 0.3s;
@@ -278,7 +275,7 @@ margin: 100px 0;
 
 
 
-/*—сылка " онтакты"-----------------------------------*/
+/*Ссылка "Контакты"-----------------------------------*/
 .butt_c::after 
 {
   -webkit-transition: all 0.3s;
@@ -372,13 +369,13 @@ max-height: 600px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-padding: 0 7%;
+padding: 0 2%;
 }
 .h1{
 font-family: Garamond;
 font-style: normal;
 font-weight: bold;
-font-size: 80px;
+font-size: 57px;
 
 color: #FFFFFF;
 
@@ -417,6 +414,7 @@ color: #FFFFFF;
     max-height: 650px;
     display: flex;
     padding: 2%;
+    margin-left: 2%;
 }
 .bg2 {
 background: url("img/back3.png");
@@ -497,7 +495,7 @@ a {
 text-decoration: none;
 	
 }
-/*    ћ≈Ќё-Ѕ”–√≈–*/
+/*    МЕНЮ-БУРГЕР*/
 #menu-burger {
  width: 60px;
   height: 60px;
@@ -682,8 +680,8 @@ margin: 3% 2%;
      
     }
 }
-/* ќЌ≈÷ ћ≈Ќё-Ѕ”–√≈–ј*/
-            /*ћ≈ƒ»ј-«јѕ–ќ—џ ƒЋя Ѕ”–√≈–ј ƒќ  ќЌ÷ј*/
+/*КОНЕЦ МЕНЮ-БУРГЕРА*/
+            /*МЕДИА-ЗАПРОСЫ ДЛЯ БУРГЕРА ДО КОНЦА*/
 @media only screen and (max-device-width:1280px) {
    .slider {
 	position: absolute;
@@ -730,7 +728,7 @@ text-decoration: none;
 background: rgba(141, 11, 35, 0.88);
 border-radius: 30vw;
 position: fixed;
-margin:-13vw 95vw;
+margin:-13vw 90vw;
 cursor: pointer;
 z-index: 200;
 }
@@ -884,9 +882,20 @@ margin: 0 30%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 20px;
+font-size: 25px;
 margin-bottom: 20px;
 }
+    a.bu{
+       position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 25px;
+display: inline-block;
+        padding: 0 65px;
+        font-weight: 700;
+        font-family: 'Play', sans-serif;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-device-width:767px) {
@@ -927,17 +936,35 @@ text-align: justify;
 margin: 0 20%;
 }
 
-
+#overlay-menu nav ul {
+    margin: auto;
+    height: 0%;
+    padding: 0 7%;
+    }
 #overlay-menu nav ul li {
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 20px;
-margin-bottom: 20%;
+font-size: 25px;
+margin-bottom: 10%;
 }
+    
+     a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 25px;
+    display: block;
+    padding: 0 15px;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+    margin-bottom: 10%;
+    margin-left: 0;
+    }
     .accordeon li {
     margin: 0 2px 0;
-    padding: 0 30px;
+    padding: 0 10px;
     text-align: left;
 }
 
@@ -981,8 +1008,9 @@ text-align: justify;
 margin: 0 35%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 25px;
 }
+   
 }
 
 @media only screen and (max-device-width:450px) {
@@ -1004,9 +1032,23 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 25px;
 	margin: 20% 0;
+    
 }
+    
+       a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 30px;
+    display: block;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+   
+    margin: 20% 0;
+    }
     .accordeon li {
     margin: 0 0 2px 0;
     padding: 0 10px;
@@ -1044,6 +1086,7 @@ margin: 0;
 #overlay-menu nav ul li {
 font-size: 30px;
 margin: 20% 0;
+    
 }
     .down_arrow{
 max-width: 15px;
@@ -1094,7 +1137,7 @@ margin: 3%  2%;
     height: 8vw;
 }
  #overlay-menu nav {
-height: 70vw;
+height: 50vw;
 position: relative;
 top: 50vw;
 left: 12%;
@@ -1103,9 +1146,22 @@ text-align: justify;
 margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
-margin: 20% 10%;
+font-size: 25px;
+margin: 10% 0%;
+    
 }
+       a.bu{
+    position: relative;
+    color: #fff;
+    list-style-type: none;
+    font-size: 25px;
+    display: block;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
+    list-style-type: none;
+   
+    margin: 10% 0%;
+    }
 #overlay-menu nav ul {
     margin: -5%;
         height: 0%;
@@ -1121,7 +1177,7 @@ margin: 7%  -3%;
         
         
     </head>
-    <body link="white" vlink="white" alink="rgba(141, 11, 35, 0.88)">
+  <body link="white" vlink="white" alink="rgba(141, 11, 35, 0.88)">
         
         <div class="background">
         <header class="header">
@@ -1131,15 +1187,16 @@ margin: 7%  -3%;
             </div>
         </header>
                
-
-       <nav>
+     <!--        Навигация с вылетающим меню-->
+>
+         <nav>
   <ul class="menu">
-      <li><a href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html" class="butt_m">Главная</a></li>
-      <li><a href="https://explorethetime.github.io/рейтинг/index.html" class="butt_r">Рейтинг</a></li>
+      <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html" class="butt_m">Главная</a></li>
+      <li><a href="https://explorethetime.github.io/%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/index.html" class="butt_r">Рейтинг</a></li>
       <li><a href="" class="butt_p">Пазлы<span class="submenu_link"></span></a>
       <ul class="submenu">
         <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D1%8B/index.html">Актёры</a></li>
-        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html"> Кадры из фильма</a></li>
+        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html">Кадры из фильма</a></li>
         <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Мультфильмы</a></li>
         <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Фильмы</a></li>
 
@@ -1148,17 +1205,19 @@ margin: 7%  -3%;
       <li><a href="" class="butt_t">Тесты<span class="submenu_link"></span></a>
       <ul class="submenu">
         <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%20%D1%81%D0%B5%D0%B1%D0%B5%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80/index.html">Выбери себе фильм на вечер</a></li>
-        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html"> Как хорошо ты разбираешься в актёрах?</a></li>
-        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html"> Какое десятилетие тебе подходит?</a></li>
-        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html"> Кто ты из героев фильмов?</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html">Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html">Какое десятилетие тебе подходит?</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html">Кто ты из героев фильмов?</a></li>
 
       </ul>
     </li>
-    <li><a href="#aboutus">О нас</a></li>
-    <li><a href="#contacts"> Контакты</a></li>
+    <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#first" class="butt_a">О нас</a></li>
+    <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#second" class="butt_c">Контакты</a></li>
   </ul>
 </nav>
+<!--        Конец навигации с вылетающим меню-->
 
+<!--        ВЫПЛЫВАЮЩЕЕ МЕНЮ-БУРГЕР-->
  <div id="menu-burger">
   <span class="menu-icon"></span>
 </div>
@@ -1166,18 +1225,18 @@ margin: 7%  -3%;
 <div id="overlay-menu">
 <nav role='navigation'>
      <ul class="accordeon">            
-         <li><a href="https://explorethetime.github.io/Готовая главная/Главная страница/index.html" target="_self">Главная</a> </li>
+        <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html">Главная</a> 
                             
-            <li><a href="https://explorethetime.github.io/рейтинг/index.html" target="_self">Рейтинг</a>  </li>
+            <a class="bu" href="https://explorethetime.github.io/%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/index.html">Рейтинг</a> 
             
             <li class="active"><a href="button_puzzle.html">Пазлы <img class="down_arrow" src="img/down-arrow.png"></a>
                 <ul style="display: none">
 
         
-                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D1%8B/index.html" target="_self">Актёры </a> </li>
-                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html" target="_self"> Кадры из фильма</a></li>
-                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html" target="_self">Мультфильмы</a></li>
-                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html" target="_self">Фильмы</a></li>
+                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D1%8B/index.html">Актёры </a> </li>
+                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html">Кадры из фильма</a></li>
+                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Мультфильмы</a></li>
+                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Фильмы</a></li>
                 
                 </ul>
     
@@ -1186,21 +1245,20 @@ margin: 7%  -3%;
             <li><a href="button_tests.html">Тесты <img class="down_arrow" src="img/down-arrow.png"></a> 
             <ul style="display: none">
 
-                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%20%D1%81%D0%B5%D0%B1%D0%B5%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80/index.html" target="_self">Выбери себе фильм на вечер</a></li>
-                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html" target="_self"> Как хорошо ты разбираешься в актёрах?</a></li>
-                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html" target="_self"> Какое десятилетие тебе подходит?</a></li>
-                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html" target="_self"> Кто ты из героев фильмов?</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%20%D1%81%D0%B5%D0%B1%D0%B5%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80/index.html">Выбери себе фильм на вечер</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html">Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html">Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html">Кто ты из героев фильмов?</a></li>
                 </ul>
          </li>
                             
-            <li><a href="#aboutus" target="_self">О нас</a>  </li>
+            <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#first">О нас</a> 
                             
-            <li><a href="#contacts" target="_self">Контакты</a>  </li>
+            <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#second">Контакты</a>  
                 </ul>
             </nav>
             </div>
-
-    <script id="rendered-js" >
+     <script id="rendered-js" >
 $('#menu-burger').click(function () {
 var overlayMenu = $('#overlay-menu'),
 menuIconLines = $('#menu-burger .menu-icon'),
@@ -1217,7 +1275,7 @@ menuBurger.addClass('open');
 });
 </script> 
             
-                <script>
+              <script>
                 $(".accordeon > li > a").click(function (e) {
 	e.preventDefault();
 	
@@ -1232,6 +1290,9 @@ menuBurger.addClass('open');
 	$(this).parent().addClass('slide');
 });
             </script>
+            
+            
+<!--       КОНЕЦ ВЫПЛЫВАЮЩЕГО МЕНЮ-БУРГЕР     -->
             
             <div class="bg_transparent">
             <div class="bg_transparent_inner">
