@@ -33,11 +33,12 @@
 /*Фиксация----------------------------------------*/
 .menu
 {
-  width: 100%;
+  width: 90%;
   height: 60px; 
-    display: flex;
-    justify-content: space-around;
     z-index: 50;
+    margin: 0 auto;
+        display: flex;
+    justify-content: space-around;
 }
 
 .butt_m,
@@ -786,7 +787,7 @@ color: #fff;
 }
 .down_arrow{
 max-width: 20px;
-margin: 3% 2%;
+margin: 0 2%;
     }
 
 
@@ -823,8 +824,8 @@ margin: 3% 2%;
 .accordeon > li > ul {
 	display: none;
 	width: 100%;
-	padding: 0;
-    margin: 10px;
+	padding: 10px 8px;
+    margin: 100px;
 }
 .accordeon > li.active > ul {
 	display: block;
@@ -852,10 +853,9 @@ margin: 3% 2%;
      
     }
 }
-
 /*КОНЕЦ МЕНЮ-БУРГЕРА*/
 
-*/
+
 /*Фиксация----------------------------------------*/
 
 .menu
@@ -1354,7 +1354,6 @@ z-index: 200;
 }
 
 /*МЕДИА-ЗАПРОСЫ ДЛЯ БУРГЕРА ДО КОНЦА*/
-
 @media only screen and (max-device-width:1280px) {
    .slider {
 	position: absolute;
