@@ -30,7 +30,7 @@ body *, html * {
 }
 .header {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
  /* Dropdown Content (Hidden by Default) */
