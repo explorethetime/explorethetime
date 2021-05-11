@@ -666,7 +666,7 @@ margin-top: 2%;
     background-repeat: no-repeat;
   background-size: contain;
   width: 50%;
-margin-top: -25%;
+margin-top: -20%;
   height: 135px;
     margin-left: -15%;
 }
@@ -692,7 +692,7 @@ margin-top: -25%;
   font-family: "Play", sans-serif;
   font-weight: bold;
     color: rgba(255, 255, 255, 0.91);
-margin-top: -30%;
+margin-top: -25%;
     padding-bottom: 4%;
 }
 
@@ -816,7 +816,7 @@ p {
 
 h3 {
     font-size: 66px;
-    margin-top: -13%;
+    margin-top: -11%;
 }
 
 .corner3{
@@ -831,7 +831,7 @@ h3 {
     background-image: url(../img/corner1.png);
     background-repeat: no-repeat;
   background-size: contain;
-margin-top: -12.3%;
+margin-top: -9.3%;
   height: 135px;
     margin-left: -4%;
 }
@@ -956,12 +956,12 @@ float: right;
   background-size: contain;
   height: 135px;
 margin-left: -10%;
-    margin-top: -20%;
+    margin-top: -15%;
 }
 
 .p {
     margin-bottom: 7%;
-    margin-top: -25%;
+    margin-top: -20%;
  font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: bold;
@@ -984,6 +984,7 @@ color: rgba(255, 255, 255, 0.91);
     position: relative;
     margin-left: 61%;
     margin-top: 2.5%;
+	margin-bottom: 5%;
     filter: drop-shadow(0px 9px 15px rgba(219, 38, 38, 0.7));
     background: black;
 border: 1px solid #000000;
@@ -1076,7 +1077,7 @@ margin-top: 50%;
   position: absolute;
 width: 70%;
 margin-left: 7%;
-margin-top: -10%;
+margin-top: -6%;
 font-family: 'Play', sans-serif;
 font-style: normal;
 font-weight: bold;
@@ -1106,7 +1107,7 @@ color: rgba(255, 255, 255, 0.91);
   background-size: contain;
   height: 135px;
  margin-left: 79%;
-    margin-top: -176%;
+    margin-top: -173%;
     
 }
 
@@ -1130,7 +1131,7 @@ margin-top: 4%;
     position: relative;
 width: 30%;    
 margin-left: 35%;  
-margin-top: 50%;  
+margin-top: 57%;  
 
 font-family: 'Play', sans-serif;
 font-style: normal;
@@ -1192,7 +1193,7 @@ margin-top: 3%;
   background-size: contain;
   width: 40%;
   height: 17px;  
-  margin-top: -16%;
+  margin-top: -20%;
     margin-left: 60%;
 }
 
