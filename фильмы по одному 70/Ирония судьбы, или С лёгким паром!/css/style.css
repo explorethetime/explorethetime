@@ -1725,7 +1725,7 @@ font-size: 15px;
     text-align: left;
 }
     .accordeon > li > a {
-    margin: 10% 0;
+    margin: 0% 0% 10% 7%;
             }
 @media only screen and (max-device-width:400px) {
     .slider__item {
