@@ -787,7 +787,7 @@ color: #fff;
 }
 .down_arrow{
 max-width: 20px;
-margin: 3% 2%;
+margin: 0 2%;
     }
 
 
@@ -824,8 +824,8 @@ margin: 3% 2%;
 .accordeon > li > ul {
 	display: none;
 	width: 100%;
-	padding: 0;
-    margin: 10px;
+	padding: 10px 8px;
+    margin: 100px;
 }
 .accordeon > li.active > ul {
 	display: block;
@@ -853,7 +853,6 @@ margin: 3% 2%;
      
     }
 }
-
 /*КОНЕЦ МЕНЮ-БУРГЕРА*/
 
 */
@@ -1617,7 +1616,7 @@ margin: 0 20%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 25px;
+font-size: 20px;
 margin-bottom: 10%;
 }
     
@@ -1625,7 +1624,7 @@ margin-bottom: 10%;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     display: block;
     padding: 0 15px;
     font-weight: 700;
@@ -1680,7 +1679,7 @@ text-align: justify;
 margin: 0 35%;
 }
 #overlay-menu nav ul li {
-font-size: 25px;
+font-size: 20px;
 }
    
 }
@@ -1756,12 +1755,12 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 15px;
 margin: 20% 0;
     
 }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 3%  2%;
     }
 }
@@ -1839,6 +1838,6 @@ margin: 10% 0%;
         height: 0%;
     }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 7%  -3%;
     }
