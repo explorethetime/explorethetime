@@ -809,8 +809,6 @@ margin: 0 2%;
 	display: block;
 	font-weight: 700;
       font-family: 'Play', sans-serif;
-	height: 35px;
-	line-height: 50px;
 	padding: 0;
 	text-decoration: none;
 	vertical-align: top;
@@ -1727,7 +1725,7 @@ font-size: 15px;
     text-align: left;
 }
     .accordeon > li > a {
-    margin: -30% 0% 10% 7%;
+    margin: 0% 0% 10% 7%;
             }
 @media only screen and (max-device-width:400px) {
     .slider__item {
@@ -1812,7 +1810,6 @@ margin: 3%  2%;
 height: 50vw;
 position: relative;
 top: 50vw;
-left: 12%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 5%;
