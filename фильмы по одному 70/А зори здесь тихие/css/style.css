@@ -1704,7 +1704,7 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 25px;
+font-size: 15px;
 	margin: 20% 0;
     
 }
@@ -1713,7 +1713,7 @@ font-size: 25px;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 15px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -1818,7 +1818,7 @@ text-align: justify;
 margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 25px;
+font-size: 10px;
 margin: 10% 0%;
     
 }
@@ -1826,7 +1826,7 @@ margin: 10% 0%;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 10px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
