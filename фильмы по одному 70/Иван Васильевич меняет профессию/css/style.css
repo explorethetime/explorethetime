@@ -1400,7 +1400,7 @@ text-decoration: none;
 background: rgba(141, 11, 35, 0.88);
 border-radius: 30vw;
 position: fixed;
-margin:-10vw 99vw;
+margin:-10vw 97vw;
 cursor: pointer;
 z-index: 200;
 }
@@ -1608,26 +1608,30 @@ text-align: justify;
 margin: 0 20%;
 }
 
-
+#overlay-menu nav ul {
+    margin: auto;
+    height: 0%;
+    padding: 0 7%;
+    }
 #overlay-menu nav ul li {
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 20px;
-margin-bottom: 20%;
+font-size: 25px;
+margin-bottom: 10%;
 }
     
      a.bu{
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 25px;
     display: block;
     padding: 0 15px;
     font-weight: 700;
     font-family: 'Play', sans-serif;
     list-style-type: none;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     margin-left: 0;
     }
     .accordeon li {
@@ -1676,7 +1680,7 @@ text-align: justify;
 margin: 0 35%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 25px;
 }
    
 }
@@ -1700,7 +1704,7 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 15px;
 	margin: 20% 0;
     
 }
@@ -1709,7 +1713,7 @@ font-size: 30px;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 15px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -1814,8 +1818,8 @@ text-align: justify;
 margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
-margin: 20% 0%;
+font-size: 10px;
+margin: 10% 0%;
     
 }
        a.bu{
@@ -1837,5 +1841,4 @@ margin: 20% 0%;
     .down_arrow{
 max-width: 15px;
 margin: 7%  -3%;
-    }
     }
