@@ -10,26 +10,25 @@
     
      <script>
 $(function() {
-menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
-$(window).scroll(function (){
-if ($(window).scrollTop() > menu_top) {
-if ($('.menu').css('position') != 'fixed') {
-$('.menu').css('position','fixed');
-$('.menu').css('margin','0 auto');
-$('.menu').css('left','0');
-$('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
-$('.menu').css('background','rgba(0, 0, 0, 0.6)');
-$('.content').css('margin-top','8%');
-}
-} else {
-if ($('.menu').css('position') == 'fixed') {
-$('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
-$('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
-$('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
-$('.content').css('margin-top','');
-}
-}
-});
+  menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > menu_top) {
+      if ($('.menu').css('position') != 'fixed') {
+        $('.menu').css('position','fixed');
+          $('.menu').css('margin','0 auto');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
+           $('.menu').css('background','rgba(0, 0, 0, 0.6)');
+        $('.content').css('margin-top','7%');
+      }
+    } else {
+      if ($('.menu').css('position') == 'fixed') {
+     $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
+          $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+        $('.content').css('margin-top','');
+      }
+    }
+  });
 });
         </script>
 </head>
@@ -37,14 +36,14 @@ $('.content').css('margin-top','');
 <body link="white" vlink="white" alink="rgba(141, 11, 35, 0.88)">
   <header class="header_fig"><img src="img/explore.jpg" width="1600" height="220" alt="header_photo"></header>
 
-	<nav>
+	            <nav>
   <ul class="menu">
       <li><a href="" class="butt_m">Главная</a></li>
       <li><a href="" class="butt_r">Рейтинг</a></li>
       <li><a href="" class="butt_p">Пазлы<span class="submenu_link"></span></a>
       <ul class="submenu">
         <li><a href="">Актёры</a></li>
-        <li><a href="">Кадры из фильма</a></li>
+        <li><a href=""> Кадры из фильма</a></li>
         <li><a href="">Мультфильмы</a></li>
         <li><a href="">Фильмы</a></li>
 
@@ -53,19 +52,17 @@ $('.content').css('margin-top','');
       <li><a href="" class="butt_t">Тесты<span class="submenu_link"></span></a>
       <ul class="submenu">
         <li><a href="">Выбери себе фильм на вечер</a></li>
-        <li><a href="">Как хорошо ты разбираешься в актёрах?</a></li>
-        <li><a href="">Какое десятилетие тебе подходит?</a></li>
-        <li><a href="">Кто ты из героев фильмов?</a></li>
+        <li><a href=""> Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href=""> Какое десятилетие тебе подходит?</a></li>
+        <li><a href=""> Кто ты из героев фильмов?</a></li>
 
       </ul>
     </li>
     <li><a href="" class="butt_a">О нас</a></li>
-    <li><a href="" class="butt_c">Контакты</a></li>
+    <li><a href="" class="butt_c"> Контакты</a></li>
   </ul>
 </nav>
-            
-            
-            
+
  <div id="menu-burger">
   <span class="menu-icon"></span>
 </div>
@@ -82,7 +79,7 @@ $('.content').css('margin-top','');
 
         
                     <li> <a href="#">Актёры </a> </li>
-                    <li> <a href="#">Кадры из фильма</a></li>
+                    <li> <a href="#"> Кадры из фильма</a></li>
                     <li><a href="#">Мультфильмы</a></li>
                     <li><a href="#">Фильмы</a></li>
                 
@@ -94,9 +91,9 @@ $('.content').css('margin-top','');
             <ul style="display: none">
 
                     <li><a href="#">Выбери себе фильм на вечер</a></li>
-                    <li><a href="#">Как хорошо ты разбираешься в актёрах?</a></li>
-                    <li><a href="#">Какое десятилетие тебе подходит?</a></li>
-                    <li><a href="#">Кто ты из героев фильмов?</a></li>
+                    <li><a href="#"> Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="#"> Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="#"> Кто ты из героев фильмов?</a></li>
                 </ul>
          </li>
                             
@@ -138,8 +135,7 @@ menuBurger.addClass('open');
 	$(this).next().slideToggle();
 	$(this).parent().addClass('slide');
 });
-            </script>
-
+            </script> 
 
     <p class="fig"><img src="img/MF.gif" width="750" height="430" alt="photo"></p>
 
