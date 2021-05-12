@@ -807,8 +807,6 @@ margin: 0 2%;
 	display: block;
 	font-weight: 700;
       font-family: 'Play', sans-serif;
-	height: 35px;
-	line-height: 50px;
 	padding: 0;
 	text-decoration: none;
 	vertical-align: top;
@@ -1368,7 +1366,7 @@ z-index: 200;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 105vw;
+    top: 113vw;
     width: 100vw; 
     margin-right: 11.5vw; 
 }
@@ -1466,7 +1464,7 @@ background: #fff;
 position: fixed;
 background: rgba(141, 11, 35, 0.88);
 height: 100%;
-width: 30vw;
+width: 35vw;
 top: 0;
 opacity: 0.85;
 z-index: 100;
@@ -1526,7 +1524,7 @@ margin: 3%  2%;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 105vw;
+    top: 107vw;
     width: 100vw; 
     margin-right: 17vw; 
 }
@@ -1584,7 +1582,7 @@ display: inline-block;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 105vw;
+    top: 106vw;
     width: 100vw; 
     margin-right: 3vw; 
 }
@@ -1653,7 +1651,7 @@ margin-bottom: 10%;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 107vw;
+    top: 110vw;
     width: 100vw; 
     margin-right: 3vw; 
 }
@@ -1695,7 +1693,7 @@ font-size: 20px;
 height: 70vw;
 position: relative;
 top: 50vw;
-left: 7%;
+left: 1%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0;
@@ -1809,10 +1807,8 @@ margin: 3%  2%;
 height: 50vw;
 position: relative;
 top: 50vw;
-left: 12%;
 transform: translateY(-50%);
 text-align: justify;
-margin: 5%;
 }
 #overlay-menu nav ul li {
 font-size: 10px;
