@@ -910,14 +910,6 @@ margin: 0 2%;
 */
 /*Фиксация----------------------------------------*/
 
-.menu
-{
-width: 100vw;
-
-height: 3.75vw; 
-display: flex;
-justify-content: space-around;
-z-index: 50;
 
 }
 
@@ -1591,7 +1583,7 @@ margin: 3%  2%;
     height: 37vw;
     padding-left: 2vw;
 }
-}
+
  #overlay-menu nav {
 height: 70vw;
 position: relative;
@@ -1649,8 +1641,8 @@ display: inline-block;
     height: 38vw;
     padding-left: 1vw;
 }
-}
-  #overlay-menu nav {
+
+#overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 55vw;
@@ -1690,7 +1682,9 @@ margin-bottom: 10%;
     margin: 0 2px 0;
     padding: 0 10px;
     text-align: left;
+
 }
+
 @media only screen and (max-device-width:548px) {
    .slider {
 	position: absolute;
@@ -1720,11 +1714,11 @@ margin-bottom: 10%;
     .slider__item {
         padding-left: 20vw;
     }
-	 #overlay-menu nav {
+	#overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
-left: -30%;
+left: -25%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0 35%;
@@ -1732,8 +1726,8 @@ margin: 0 35%;
 #overlay-menu nav ul li {
 font-size: 20px;
 }
-   
 }
+
 @media only screen and (max-device-width:450px) {
     .slider__item {
     padding-left: 19vw;
@@ -1743,8 +1737,8 @@ font-size: 20px;
 	list-style: none;
 	margin: -3vw 1vw;    
 }
-}
-  #overlay-menu nav {
+
+   #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
@@ -1778,9 +1772,8 @@ font-size: 15px;
 }
     .accordeon > li > a {
     margin: 0% 0% 10% 7%;
-            } 
-    }
-
+            
+}
 
 @media only screen and (max-device-width:400px) {
     .slider__item {
@@ -1799,12 +1792,11 @@ font-size: 15px;
 	background-color: #fff;
 	border-radius: 50%;  
 }  
-}
-  #overlay-menu nav {
+ #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
-left: 7%;
+left: 2%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0;
@@ -1818,7 +1810,9 @@ margin: 20% 0;
 max-width: 10px;
 margin: 3%  2%;
     }
+
 }
+
 
 @media only screen and (max-device-width:320px) {
 .slider__item img{
