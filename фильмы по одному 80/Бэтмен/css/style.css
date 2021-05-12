@@ -1582,7 +1582,7 @@ margin: 3%  2%;
     padding-left: 2vw;
 }
 }
-#overlay-menu nav {
+ #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
@@ -1611,7 +1611,6 @@ display: inline-block;
         font-family: 'Play', sans-serif;
         margin-bottom: 20px;
     }
-
 }
 @media only screen and (max-device-width:767px) {
    .slider {
@@ -1640,7 +1639,7 @@ display: inline-block;
     height: 38vw;
     padding-left: 1vw;
 }
-	#overlay-menu nav {
+	  #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 55vw;
@@ -1681,7 +1680,6 @@ margin-bottom: 10%;
     padding: 0 10px;
     text-align: left;
 }
-
 @media only screen and (max-device-width:548px) {
    .slider {
 	position: absolute;
@@ -1711,7 +1709,7 @@ margin-bottom: 10%;
     .slider__item {
         padding-left: 20vw;
     }
-	#overlay-menu nav {
+	 #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
@@ -1725,6 +1723,7 @@ font-size: 20px;
 }
    
 }
+
 @media only screen and (max-device-width:450px) {
     .slider__item {
     padding-left: 19vw;
@@ -1734,7 +1733,7 @@ font-size: 20px;
 	list-style: none;
 	margin: -3vw 1vw;    
 }
-	  #overlay-menu nav {
+	 #overlay-menu nav {
 height: 70vw;
 position: relative;
 top: 50vw;
@@ -1769,6 +1768,7 @@ font-size: 15px;
     .accordeon > li > a {
     margin: 0% 0% 10% 7%;
             } 
+    }
 
 @media only screen and (max-device-width:400px) {
     .slider__item {
@@ -1850,7 +1850,7 @@ margin: 3%  2%;
     height: 8vw;
 }
 
- #overlay-menu nav {
+#overlay-menu nav {
 height: 50vw;
 position: relative;
 top: 50vw;
