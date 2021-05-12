@@ -128,7 +128,7 @@ text-decoration: none;
 }
 nav {
     width: 100%;
-
+ overflow-x: hidden;
   margin: 0 auto;
 }
 nav ul {
