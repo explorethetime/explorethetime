@@ -912,14 +912,7 @@ margin: 0 2%;
 */
 /*Фиксация----------------------------------------*/
 
-.menu
-{
-width: 100vw;
 
-height: 3.75vw; 
-display: flex;
-justify-content: space-around;
-z-index: 50;
 
 }
 
