@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Рейтинг</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bars.css">
-    <link rel="icon" href="img/mask.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
@@ -16,17 +15,18 @@ $(function() {
   menu_top = $('.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').offset().top;
   $(window).scroll(function (){
     if ($(window).scrollTop() > menu_top) {
-      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') != 'fixed') {
-        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','fixed');
+      if ($('.menu').css('position') != 'fixed') {
+        $('.menu').css('position','fixed');
+          $('.menu').css('margin','0 auto');
         $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','0');
            $('.menu').css('background','rgba(0, 0, 0, 0.6)');
-        $('.content').css('margin-top','0');
+        $('.content').css('margin-top','7%');
       }
     } else {
-      if ($('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position') == 'fixed') {
-        $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
+      if ($('.menu').css('position') == 'fixed') {
+     $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('position','');
         $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('top','');
-          $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
+          $('.menu').css('margin','0 auto'); $('.menu,.butt_m,.butt_r,.butt_p,.butt_t,.butt_a,.butt_c').css('background','none');
         $('.content').css('margin-top','');
       }
     }
@@ -37,7 +37,7 @@ $(function() {
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Gruppo&family=Play:wght@400;700&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 </style>
-     <style>
+     <style> 
       * {
 box-sizing: border-box;
 }
@@ -45,26 +45,110 @@ box-sizing: border-box;
 a {
 text-decoration: none;
 }
+.menu
+{
+  width: 100%;
+  height: 60px; 
+    display: flex;
+    justify-content: space-around;
+    z-index: 50;
+}
 
+.butt_m,
+.butt_r,
+.butt_p,
+.butt_t,
+.butt_a,
+.butt_c
+{  
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+text-align: center;
+color: rgba(255, 255, 255, 0.88);
+text-decoration: none; 
+}
+            /*            Выплывающее меню*/
+nav {
+    width: 100%;
+
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu:after {
+  content: "";
+  display: none;}
+.menu > li {
+    padding: 0.7% 0%;
+  float: left;
+  position: relative;
+  font-family: 'Play', sans-serif;
+}
+.menu > li > a {
+  text-transform: uppercase;
+  font-size: 2.1vw;
+  color: white;
+}
+.menu li a:hover { color: white; 
+font-weight: bold;}
+.submenu-link:after {
+  font-family: 'Play', sans-serif;
+  color: inherit;
+  margin-left: 10px;
+}
+.submenu {
+  background: rgba(141, 11, 35, 0.8);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 210px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 20px;
+margin: 100px 0;
+}
+.submenu li:last-child a { border-bottom: none; }
+.menu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+/*    КОНЕЦ НАВИГАЦИИ С ВЫПЛЫВАЮЩИМ МЕНЮ*/
+
+/*    МЕНЮ-БУРГЕР*/
 #menu-burger {
-background: rgba(141, 11, 35, 0.88);
-border-radius: 50%;
-position: fixed;
-margin:-10% 90%;
-cursor: pointer;
-z-index: 200;
+ width: 60px;
+  height: 60px;
+  background: rgba(141, 11, 35, 0.88);
+  border-radius: 50%;
+  position: fixed;
+  margin-top: -9%;
+  left: -5%;
+    cursor: pointer;
+  z-index: 200;
 }
 
 #menu-burger .menu-icon {
-display: block;
-height: 2px;
-width: 20px;
-background: #fff;
-position: absolute;
-top: 50%;
-left: 50%;
-margin-left: -9px;
-margin-top: -1px;
+ display: block;
+  height: 2px;
+  width: 20px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -9px;
+  margin-top: -1px;
 }
 
 #menu-burger .menu-icon:after {
@@ -123,7 +207,7 @@ width: 30%;
 top: 0;
 opacity: 0.85;
 z-index: 100;
-right: -100%;
+right: -100vw;
 transition: 0.35s;
 }
 
@@ -137,14 +221,15 @@ position: relative;
 top: 50%;
 left: 0;
 transform: translateY(-50%);
-font-size: 32px;
+font-size: 31px;
 text-align: center;
+
 }
 
 #overlay-menu nav ul {
+margin: 10%;
+height: 0;
 display: inline-block;
-margin: auto;
-height: 100%;
 }
 
 #overlay-menu nav ul li {
@@ -158,84 +243,534 @@ list-style-type: none
 color: #fff;
 
 }
+.down_arrow{
+max-width: 20px;
+margin: 3% 2%;
+    }
 
-#overlay-menu nav ul li a:after {
-content: ' ';
-display: block;
-position: absolute;
-top: 100%;
-left: 0;
-height: 3px;
-width: 0%;
-background: #fff;
-transition: 0.25s;
+
+    .accordeon,
+.accordeon ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordeon li {
+	margin: 0 0 2px 0;
+	padding: 0 65px;
+    text-align: left;
+    
 }
 
-#overlay-menu nav ul li a:hover:after {
-width: 100%;
+.accordeon > li > a {
+	color: #333;
+	display: block;
+	font-weight: 700;
+      font-family: 'Play', sans-serif;
+	height: 35px;
+	line-height: 50px;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.accordeon > li.slide > a,
+.accordeon > li.active > a {
+	color: #FFF;
+
+}
+.accordeon > li > ul {
+	display: none;
+	width: 100%;
+	padding: 0;
+    margin: 10px;
+}
+.accordeon > li.active > ul {
+	display: block;
 }
 
-@media (min-width: 1170px){
-#menu-burger{
-display: none;
+.accordeon > li > ul > li {
+	padding: 5px 0;
+	text-decoration: none;
+	display: block;
+	color: #333;
 }
+    @media (min-width: 1170px){
+    #menu-burger{
+        display: none;
+    }
 }
 @media (max-width: 1170px){
+    .menu{
+        display: none;
+    }
+    #menu-burger{
+        display: inline-block;
+        width: 5vw;
+        height: 5vw;
+     
+    }
+}
+/*КОНЕЦ МЕНЮ-БУРГЕРА*/
+                  /*МЕДИА-ЗАПРОСЫ ДЛЯ БУРГЕРА ДО КОНЦА*/
+@media only screen and (max-device-width:1280px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 112.7vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 11.5vw; 
+}
+}
+
+@media only screen and (max-device-width: 1200px){
 .menu{
 display: none;
 }
+
 #menu-burger{
 display: inline-block;
 width: 5vw;
 height: 5vw;
+}
+    
+* {
+box-sizing: border-box;
+}
 
+a {
+text-decoration: none;
+}
+
+#menu-burger {
+background: rgba(141, 11, 35, 0.88);
+border-radius: 30vw;
+position: fixed;
+margin:-10vw 90vw;
+cursor: pointer;
+z-index: 200;
+}
+
+#menu-burger .menu-icon {
+display: block;
+height: 0.16vw;
+width: 1.57vw;
+background: #fff;
+position: absolute;
+top: 2.3vw;
+left: 2.45vw;
+margin-left: -0.58vw;
+margin-top: 0vw;
+}
+
+#menu-burger .menu-icon:after {
+content: '';
+display: block;
+height: 0.16vw;
+width: 1.5vw;
+background: #fff;
+position: absolute;
+top: 0.1vw;
+left: 0.6vw;
+margin-left: -0.56vw;
+margin-top: -0.38vw;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon:before {
+content: ' ';
+display: block;
+height: 0.16vw;
+width: 1.5vw;
+background: #fff;
+position: absolute;
+top: 0.1vw;
+left: 0.6vw;
+margin-left: -0.56vw;
+margin-top: 0.22vw;
+transition: 0.35s;
+}
+
+#menu-burger .menu-icon.open:before{
+transform: rotate(45deg);
+margin-top: -0.06vw;
+background: #000;
+}
+
+#menu-burger .menu-icon.open:after{
+transform: rotate(-45deg);
+margin-top: -0.06vw;
+background: #000;
+}
+
+#menu-burger.open {
+background: #fff;
+}
+
+#menu-burger .menu-icon.open {
+background: #fff;
+}
+
+#overlay-menu {
+position: fixed;
+background: rgba(141, 11, 35, 0.88);
+height: 100%;
+width: 30vw;
+top: 0;
+opacity: 0.85;
+z-index: 100;
+right: -100vw;
+transition: 0.35s;
+}
+
+#overlay-menu.open {
+right: 0vw;
+}
+
+#overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+left: -35%;
+transform: translateY(-55%);
+text-align: justify;
+margin: 0 35%;
+}
+
+#overlay-menu nav ul {
+margin: auto;
+height: 0%;
+}
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 20px;
+margin-bottom: 0;
+}
+
+#overlay-menu nav ul li a {
+color: #fff;
 }
 }
+.down_arrow{
+max-width: 10px;
+margin: 3%  2%;
+    }
+@media only screen and (max-device-width:1024px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 118vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 17vw; 
+}
+    
+.slider__item img{
+	width: 30vw;
+    height: 37vw;
+    padding-left: 2vw;
+}
+    #overlay-menu nav {
+height: 70vw;
+position: relative;
+top: 50vw;
+transform: translateY(-55%);
+text-align: justify;
+margin: 0;
+left: 0;
+}
+
+
+#overlay-menu nav ul li {
+position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 24px;
+margin-bottom: 10px;
+}
+    a.bu{
+       position: relative;
+color: #fff;
+list-style-type: none;
+font-size: 24px;
+display: inline-block;
+        padding: 0 65px;
+        font-weight: 700;
+        font-family: 'Play', sans-serif;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-device-width:767px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 109vw;
+    margin-right: 15vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 3vw; 
+}
+    
+.slider__item img{
+	width: 33vw;
+    height: 38vw;
+    padding-left: 1vw;
+}
+         }  
+
+@media only screen and (max-device-width:548px) {
+   .slider {
+	position: absolute;
+    top: 310vw;
+    object-position: center;
+    width: 100vw;
+}
+
+.bodies{
+	height: 48vw;
+	width: 100vw;
+    }
+    
+    .slider {
+	position: relative;
+	padding: 0vw;
+    top: 113vw;
+    width: 100vw; 
+    margin-right: 3vw; 
+}
+    
+.slider__item img{
+	width: 36vw;
+    height: 39vw;
+}
+
+    .slider__item {
+        padding-left: 20vw;
+    }
+    
+#overlay-menu nav ul li {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+a.bu {
+    font-size: 25px;
+    margin-bottom: 10px;
+} 
+}
+
+@media only screen and (max-device-width:450px) {
+    .slider__item {
+    padding-left: 19vw;
+    }
+    
+    .slider .slick-dots li{
+	list-style: none;
+	margin: -3vw 1vw;    
+}
+    #overlay-menu nav ul li {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+a.bu {
+    font-size: 30px;
+    margin-bottom: 10px;
+} 
+  
+         }
+@media only screen and (max-device-width:400px) {
+    .slider__item {
+    padding-left: 17vw;
+    }
+    
+    .slider .slick-dots li{
+	list-style: none;
+	margin: -3vw 1vw;    
+}
+    
+.slider .slick-dots button{
+	font-size: 0;
+	width: 1vw;
+	height: 3vw;
+	background-color: #fff;
+	border-radius: 50%;  
+}  
+
+    .down_arrow{
+max-width: 15px;
+margin: 3%  2%;
+    }
+}
+
+@media only screen and (max-device-width:320px) {
+.slider__item img{
+	width: 32vw;
+    height: 39vw;
+}
+    
+.slider__item {
+    padding-left: 16.5vw;
+    }
+
+.slider .slick-dots{
+	display: flex;
+    margin-left: -10vw;
+}
+
+ .slider .slick-dots li{
+	list-style: none;
+	margin: -5vw 1vw;    
+}
+
+.slider .slick-dots button{
+	font-size: 0;
+	width: 1vw;
+	height: 3vw;
+	background-color: #fff;
+	border-radius: 50%;  
+}  
+    
+.slider .slick-arrow.slick-prev{
+	left: 5vw;
+    top: 24vw;
+	background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+    width: 1vw;
+    height: 8vw;
+}
+.slider .slick-arrow.slick-next{
+	right: 5vw;
+    top: 24vw;
+	background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+     width: 1vw;
+    height: 8vw;
+}
+ #overlay-menu nav ul li {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+a.bu {
+    font-size: 30px;
+    margin-bottom: 15px;
+} 
+    }
       </style>
-
-
+      
+      
     </head>
-  <body>
+  <body link="white" vlink="white" alink="rgba(141, 11, 35, 0.88)">
       <img class="header" src="img/group2.png">
         <div class="line"></div>
-        <div class="menu">
+                <!--        Навигация с вылетающим меню-->      
+         <nav>
+  <ul class="menu">
+      <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html" class="butt_m">Главная</a></li>
+      <li><a href="https://explorethetime.github.io/%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/index.html" class="butt_r">Рейтинг</a></li>
+      <li><a href="" class="butt_p">Пазлы<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D1%8B/index.html">Актёры</a></li>
+        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html">Кадры из фильма</a></li>
+        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Мультфильмы</a></li>
+        <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Фильмы</a></li>
 
-         <a class="butt_m" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html">Главная</a>
+      </ul>
+    </li>
+      <li><a href="" class="butt_t">Тесты<span class="submenu_link"></span></a>
+      <ul class="submenu">
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%20%D1%81%D0%B5%D0%B1%D0%B5%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80/index.html">Выбери себе фильм на вечер</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html">Как хорошо ты разбираешься в актёрах?</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html">Какое десятилетие тебе подходит?</a></li>
+        <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html">Кто ты из героев фильмов?</a></li>
 
-            <a class="butt_r" href="explorethetime.github.io/рейтинг/index.html">Рейтинг</a>
-
-            <a class="butt_p" href="button_puzzle.html">Пазлы</a>
-
-           <a class="butt_t" href="button_tests.html">Тесты</a>
-
-          <a class="butt_a" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#onas">О нас</a>
-
-            <a class="butt_c" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#media">Контакты</a>
-        </div>
-
-
-      <div id="menu-burger">
-<span class="menu-icon"></span>
+      </ul>
+    </li>
+    <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#first" class="butt_a">О нас</a></li>
+    <li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#second" class="butt_c">Контакты</a></li>
+  </ul>
+</nav>
+<!--        Конец навигации с вылетающим меню-->
+           
+ <!--        ВЫПЛЫВАЮЩЕЕ МЕНЮ-БУРГЕР-->
+ <div id="menu-burger">
+  <span class="menu-icon"></span>
 </div>
 
 <div id="overlay-menu">
 <nav role='navigation'>
-<ul>
-<li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html">Главная</a> </li>
+     <ul class="accordeon">            
+        <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html">Главная</a> 
+                            
+            <a class="bu" href="https://explorethetime.github.io/%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/index.html">Рейтинг</a> 
+            
+            <li class="active"><a href="button_puzzle.html">Пазлы <img class="down_arrow" src="img/down-arrow.png"></a>
+                <ul style="display: none">
 
-<li><a href="explorethetime.github.io/рейтинг/index.html">Рейтинг</a> </li>
+        
+                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D1%8B/index.html">Актёры </a> </li>
+                    <li> <a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BA%D0%B0%D0%B4%D1%80%D1%8B%20%D0%B8%D0%B7%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0/index.html">Кадры из фильма</a></li>
+                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Мультфильмы</a></li>
+                    <li><a href="https://explorethetime.github.io/%D0%BF%D0%B0%D0%B7%D0%BB%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B/index.html">Фильмы</a></li>
+                
+                </ul>
+    
+         </li>
+                            
+            <li><a href="button_tests.html">Тесты <img class="down_arrow" src="img/down-arrow.png"></a> 
+            <ul style="display: none">
 
-<li><a href="button_puzzle.html">Пазлы</a> </li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%20%D1%81%D0%B5%D0%B1%D0%B5%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80/index.html">Выбери себе фильм на вечер</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%BE%20%D1%82%D1%8B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%88%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B0%D0%BA%D1%82%D1%91%D1%80%D0%B0%D1%85/index.html">Как хорошо ты разбираешься в актёрах?</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D0%BB%D0%B5%D1%82%D0%B8%D0%B5%20%D1%82%D0%B5%D0%B1%D0%B5%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82/index.html">Какое десятилетие тебе подходит?</a></li>
+                    <li><a href="https://explorethetime.github.io/%D1%82%D0%B5%D1%81%D1%82%20%D0%BA%D1%82%D0%BE%20%D1%82%D1%8B%20%D0%B8%D0%B7%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2/index.html">Кто ты из героев фильмов?</a></li>
+                </ul>
+         </li>
+                            
+            <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#first">О нас</a> 
+                            
+            <a class="bu" href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#second">Контакты</a>  
+                </ul>
+            </nav>
+            </div>
 
-<li><a href="button_tests.html">Тесты</a> </li>
-
-<li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#onas">О нас</a> </li>
-
-<li><a href="https://explorethetime.github.io/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/index.html#media">Контакты</a> </li>
-</ul>
-</nav>
-</div>
-               <script id="rendered-js" >
+    <script id="rendered-js" >
 $('#menu-burger').click(function () {
 var overlayMenu = $('#overlay-menu'),
 menuIconLines = $('#menu-burger .menu-icon'),
@@ -249,417 +784,427 @@ menuBurger.removeClass('open');
 menuIconLines.addClass('open');
 menuBurger.addClass('open');
 };
-
 });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script> 
+            
+                <script>
+                $(".accordeon > li > a").click(function (e) {
+	e.preventDefault();
+	
+	var menu = $(this).closest('.accordeon');
+	
+	if (false == $(this).next().is(':visible')) {
+		menu.find('li').removeClass('slide active');
+		menu.find('ul').slideUp();
+	}
+	
+	$(this).next().slideToggle();
+	$(this).parent().addClass('slide');
+});
+            </script>
+            
+<!--       КОНЕЦ ВЫПЛЫВАЮЩЕГО МЕНЮ-БУРГЕР     -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 <div class="container">
     <!--Побег из Шоушенка-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 90/Побег из Шоушенка/index.html"><img src="img/film1.png" alt="Побег из Шоушенка"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9F%D0%BE%D0%B1%D0%B5%D0%B3%20%D0%B8%D0%B7%20%D0%A8%D0%BE%D1%83%D1%88%D0%B5%D0%BD%D0%BA%D0%B0/index.html"><img src="img/film1.png" alt="Побег из Шоушенка"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 90/Побег из Шоушенка/index.html">Побег из Шоушенка</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9F%D0%BE%D0%B1%D0%B5%D0%B3%20%D0%B8%D0%B7%20%D0%A8%D0%BE%D1%83%D1%88%D0%B5%D0%BD%D0%BA%D0%B0/index.html">Побег из Шоушенка</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">9,1/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark1poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">9,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark1imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Форрест Гамп-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 90/Форрест Гамп/index.html"><img src="img/film2.png" alt="Форрест Гамп"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%A4%D0%BE%D1%80%D1%80%D0%B5%D1%81%D1%82%20%D0%93%D0%B0%D0%BC%D0%BF/index.html"><img src="img/film2.png" alt="Форрест Гамп"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 90/Форрест Гамп/index.html">Форрест Гамп</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%A4%D0%BE%D1%80%D1%80%D0%B5%D1%81%D1%82%20%D0%93%D0%B0%D0%BC%D0%BF/index.html">Форрест Гамп</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,9/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark2poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark2imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
        <!--1+1-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2010-е/фильм Джокер/1+1/index.html"><img src="img/film3.png" alt="1+1"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/1+1/index.html"><img src="img/film3.png" alt="1+1"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2010-е/фильм Джокер/1+1/index.html">1+1</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/1+1/index.html">1+1</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark3poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,5/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark3imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Иван Васильевич меняет профессию-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 70/Иван Васильевич меняет профессию/index.html"><img src="img/ivanvasilevich.png" alt="Иван Васильевич меняет профессию"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D0%B2%D0%B0%D0%BD%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%20%D0%BC%D0%B5%D0%BD%D1%8F%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D1%8E/index.html"><img src="img/ivanvasilevich.png" alt="Иван Васильевич меняет профессию"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 70/Иван Васильевич меняет профессию/index.html">Иван Васильевич меняет профессию</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D0%B2%D0%B0%D0%BD%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%20%D0%BC%D0%B5%D0%BD%D1%8F%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D1%8E/index.html">Иван Васильевич меняет профессию</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark4poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,4/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark4imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Винни-Пух-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 60/винни пух/index.html"><img src="img/vinnie.jpeg" alt="Винни-Пух"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B2%D0%B8%D0%BD%D0%BD%D0%B8%20%D0%BF%D1%83%D1%85/index.html"><img src="img/vinnie.jpeg" alt="Винни-Пух"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 60/винни пух/index.html">Винни Пух</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B2%D0%B8%D0%BD%D0%BD%D0%B8%20%D0%BF%D1%83%D1%85/index.html">Винни Пух</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark5poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark5imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Ну, погоди-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 60/ну погоди/index.html"><img src="img/nupogodi.jpeg" alt="Ну, погоди"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%BD%D1%83%20%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B8/index.html"><img src="img/nupogodi.jpeg" alt="Ну, погоди"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 60/ну погоди/index.html">Ну, погоди!</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%BD%D1%83%20%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B8/index.html">Ну, погоди!</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,7/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark6poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,6/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark6imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Начало-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2010-е/фильм Джокер/фильм Начало/index.html"><img src="img/nachalo.jpeg" alt="Начало"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE/index.html"><img src="img/nachalo.jpeg" alt="Начало"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2010-е/фильм Джокер/фильм Начало/index.html">Начало</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE/index.html">Начало</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,7/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark7poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark7imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Властелин колец: Браство Кольца-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2000-е/Властелин колец/index.html"><img src="img/thelordoftherings.png" alt="Властелин колец: Браство Кольца"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%92%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%B8%D0%BD%20%D0%BA%D0%BE%D0%BB%D0%B5%D1%86/index.html"><img src="img/thelordoftherings.png" alt="Властелин колец: Браство Кольца"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2000-е/Властелин колец/index.html">Властелин колец: Браство Кольца</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%92%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%B8%D0%BD%20%D0%BA%D0%BE%D0%BB%D0%B5%D1%86/index.html">Властелин колец: Браство Кольца</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,6/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark8poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark8imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Интерстеллар-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2010-е/фильм Джокер/фильм Интерстеллар/index.html"><img src="img/interstellar.jpeg" alt="Интерстеллар"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80/index.html"><img src="img/interstellar.jpeg" alt="Интерстеллар"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2010-е/фильм Джокер/фильм Интерстеллар/index.html">Интерстеллар</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80/index.html">Интерстеллар</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,6/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark9poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,6/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark9imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--В джазе только девушки-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 50/В джазе только девушки/index.html"><img src="img/jazz.jpeg" alt="В джазе только девушки"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%92%20%D0%B4%D0%B6%D0%B0%D0%B7%D0%B5%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B8/index.html"><img src="img/jazz.jpeg" alt="В джазе только девушки"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 50/В джазе только девушки/index.html">В джазе только девушки</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%92%20%D0%B4%D0%B6%D0%B0%D0%B7%D0%B5%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B8/index.html">В джазе только девушки</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,5/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark10poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,2/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark10imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Бриллиантовая рука-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 60/бриллиантовая рука/index.html"><img src="img/brilliant.jpeg" alt="Бриллиантовая рука"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B1%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D1%83%D0%BA%D0%B0/index.html"><img src="img/brilliant.jpeg" alt="Бриллиантовая рука"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 60/бриллиантовая рука/index.html">Бриллиантовая рука</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B1%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D1%83%D0%BA%D0%B0/index.html">Бриллиантовая рука</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,5/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark11poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,4/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark11imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--А зори здесь тихие-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 70/А зори здесь тихие/index.html"><img src="img/zori.jpeg" alt="А зори здесь тихие"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%90%20%D0%B7%D0%BE%D1%80%D0%B8%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%20%D1%82%D0%B8%D1%85%D0%B8%D0%B5/index.html"><img src="img/zori.jpeg" alt="А зори здесь тихие"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 70/А зори здесь тихие/index.html">...А зори здесь тихие</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%90%20%D0%B7%D0%BE%D1%80%D0%B8%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%20%D1%82%D0%B8%D1%85%D0%B8%D0%B5/index.html">...А зори здесь тихие</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,5/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark12poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,2/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark12imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Эта замечательная жизнь-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 40/4эта замечательная жизнь/index.html"><img src="img/wonderfullife.jpeg" alt="Эта замечательная жизнь"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/4%D1%8D%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/index.html"><img src="img/wonderfullife.jpeg" alt="Эта замечательная жизнь"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 40/4эта замечательная жизнь/index.html">Эта замечательная жизнь</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/4%D1%8D%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/index.html">Эта замечательная жизнь</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,4/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark13poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,6/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark13imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Москва слезам не верит-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 70/Москва слезам не верит/index.html"><img src="img/moscow.jpeg" alt="Москва слезам не верит"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%BC%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D1%80%D0%B8%D1%82/index.html"><img src="img/moscow.jpeg" alt="Москва слезам не верит"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 70/Москва слезам не верит/index.html">Москва слезам не верит</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%BC%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D1%80%D0%B8%D1%82/index.html">Москва слезам не верит</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,4/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark14poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,1/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark14imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
+      v
       <!--Титаник-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 90/Титаник/index.html"><img src="img/titanic.jpeg" alt="Титаник"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%A2%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%BA/index.html"><img src="img/titanic.jpeg" alt="Титаник"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 90/Титаник/index.html">Титаник</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%A2%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%BA/index.html">Титаник</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,4/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark15poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">7,8/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark15imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Собачье сердце-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 80/Собачье сердце/index.html"><img src="img/dogsheart.jpeg" alt="Собачье сердце"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%A1%D0%BE%D0%B1%D0%B0%D1%87%D1%8C%D0%B5%20%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5/index.html"><img src="img/dogsheart.jpeg" alt="Собачье сердце"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 80/Собачье сердце/index.html">Собачье сердце</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%A1%D0%BE%D0%B1%D0%B0%D1%87%D1%8C%D0%B5%20%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5/index.html">Собачье сердце</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark16poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,7/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark16imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Любовь и голуби-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 80/Любовь и голуби/index.html"><img src="img/love.jpeg" alt="Любовь и голуби"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%20%D0%B8%20%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%B8/index.html"><img src="img/love.jpeg" alt="Любовь и голуби"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 80/Любовь и голуби/index.html">Любовь и голуби</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C%20%D0%B8%20%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%B8/index.html">Любовь и голуби</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark17poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,0/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark17imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Хатико-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2000-е/Хатико/index.html"><img src="img/hatiko.jpeg" alt="Хатико"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%A5%D0%B0%D1%82%D0%B8%D0%BA%D0%BE/index.html"><img src="img/hatiko.jpeg" alt="Хатико"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2000-е/Хатико/index.html">Хатико: самый верный друг</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%A5%D0%B0%D1%82%D0%B8%D0%BA%D0%BE/index.html">Хатико: самый верный друг</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark18poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,1/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark18imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Леди и бродяга-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 50/Леди и бродяга/index.html"><img src="img/lady.jpeg" alt="Леди и бродяга"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%9B%D0%B5%D0%B4%D0%B8%20%D0%B8%20%D0%B1%D1%80%D0%BE%D0%B4%D1%8F%D0%B3%D0%B0/index.html"><img src="img/lady.jpeg" alt="Леди и бродяга"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 50/Леди и бродяга/index.html">Леди и бродяга</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%9B%D0%B5%D0%B4%D0%B8%20%D0%B8%20%D0%B1%D1%80%D0%BE%D0%B4%D1%8F%D0%B3%D0%B0/index.html">Леди и бродяга</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,2/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark19poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">7,3/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark19imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
-
+      
   <!--Бременские музыканты-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 60/бременские музыканты/index.html"><img src="img/musicians.jpeg" alt="Бременские музыканты"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B1%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B/index.html"><img src="img/musicians.jpeg" alt="Бременские музыканты"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 60/бременские музыканты/index.html">Бременские музыканты</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B1%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B/index.html">Бременские музыканты</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,2/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark20poisk"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21poisk"></div></div>
       <div class="second___mark">
         <div class="mark___title">
           IMDb <span  class="mark imdb_mark">8,1/10</span>
         </div>
-        <div class="mark___line"><div class="progress_line" id="mark20imdb"></div></div>
+        <div class="mark___line"><div class="progress_line" id="mark21imdb"></div></div>
       </div>
         </div>
           </article>
         </section>
       <!--Ирония судьбы-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 70/Ирония судьбы, или С лёгким паром!/index.html"><img src="img/ironiya_sudby.jpg" alt="Ирония судьбы"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D1%80%D0%BE%D0%BD%D0%B8%D1%8F%20%D1%81%D1%83%D0%B4%D1%8C%D0%B1%D1%8B,%20%D0%B8%D0%BB%D0%B8%20%D0%A1%20%D0%BB%D1%91%D0%B3%D0%BA%D0%B8%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BC!/index.html"><img src="img/ironiya_sudby.jpg" alt="Ирония судьбы"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 70/Ирония судьбы, или С лёгким паром!/index.html">Ирония судьбы</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%98%D1%80%D0%BE%D0%BD%D0%B8%D1%8F%20%D1%81%D1%83%D0%B4%D1%8C%D0%B1%D1%8B,%20%D0%B8%D0%BB%D0%B8%20%D0%A1%20%D0%BB%D1%91%D0%B3%D0%BA%D0%B8%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BC!/index.html">Ирония судьбы</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,2/10</span>
@@ -676,9 +1221,9 @@ menuBurger.addClass('open');
         </section>
   <!--Один дома-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 90/Один дома/index.html"><img src="img/home_alone.jpg" alt="Один дома"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9E%D0%B4%D0%B8%D0%BD%20%D0%B4%D0%BE%D0%BC%D0%B0/index.html"><img src="img/home_alone.jpg" alt="Один дома"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 90/Один дома/index.html">Один дома</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9E%D0%B4%D0%B8%D0%BD%20%D0%B4%D0%BE%D0%BC%D0%B0/index.html">Один дома</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,2/10</span>
@@ -695,9 +1240,9 @@ menuBurger.addClass('open');
   </section>
   <!--Гарри Поттер и Философский камень-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2000-е/Гарри Поттер и философский камень/index.html"><img src="img/garik.jpg" alt="Гарри Поттер и Философский камень"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%93%D0%B0%D1%80%D1%80%D0%B8%20%D0%9F%D0%BE%D1%82%D1%82%D0%B5%D1%80%20%D0%B8%20%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C/index.html"><img src="img/garik.jpg" alt="Гарри Поттер и Философский камень"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2000-е/Гарри Поттер и философский камень/index.html">Гарри Поттер и Философский камень</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%93%D0%B0%D1%80%D1%80%D0%B8%20%D0%9F%D0%BE%D1%82%D1%82%D0%B5%D1%80%20%D0%B8%20%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C/index.html">Гарри Поттер и Философский камень</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,2/10</span>
@@ -714,9 +1259,9 @@ menuBurger.addClass('open');
   </section>
   <!--Завтрак у Тиффани-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 60/завтрак у тиффани/index.html"><img src="img/tiffany.jpg" alt="Завтрак у Тиффани"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%20%D1%83%20%D1%82%D0%B8%D1%84%D1%84%D0%B0%D0%BD%D0%B8/index.html"><img src="img/tiffany.jpg" alt="Завтрак у Тиффани"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 60/завтрак у тиффани/index.html">Завтрак у Тиффани</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2060/%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%20%D1%83%20%D1%82%D0%B8%D1%84%D1%84%D0%B0%D0%BD%D0%B8/index.html">Завтрак у Тиффани</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,1/10</span>
@@ -733,9 +1278,9 @@ menuBurger.addClass('open');
   </section>
   <!--Касабланка-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 40/5касабланка/index.html"><img src="img/kasablanka.jpg" alt="Касабланка"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/5%D0%BA%D0%B0%D1%81%D0%B0%D0%B1%D0%BB%D0%B0%D0%BD%D0%BA%D0%B0/index.html"><img src="img/kasablanka.jpg" alt="Касабланка"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 40/5касабланка/index.html">Касабланка</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/5%D0%BA%D0%B0%D1%81%D0%B0%D0%B1%D0%BB%D0%B0%D0%BD%D0%BA%D0%B0/index.html">Касабланка</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,0/10</span>
@@ -752,9 +1297,9 @@ menuBurger.addClass('open');
   </section>
   <!--12 месяцев-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 50/12 месяцев/index.html"><img src="img/twelwe_mes.jpg" alt="12 месяцев"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/12%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B5%D0%B2/index.html"><img src="img/twelwe_mes.jpg" alt="12 месяцев"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 50/12 месяцев/index.html">12 месяцев</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/12%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B5%D0%B2/index.html">12 месяцев</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,0/10</span>
@@ -771,9 +1316,9 @@ menuBurger.addClass('open');
   </section>
   <!--Экипаж-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 70/Экипаж/index.html"><img src="img/bad_russian_film.jpg" alt="Экипаж"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%AD%D0%BA%D0%B8%D0%BF%D0%B0%D0%B6/index.html"><img src="img/bad_russian_film.jpg" alt="Экипаж"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 70/Экипаж/index.html">Экипаж</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2070/%D0%AD%D0%BA%D0%B8%D0%BF%D0%B0%D0%B6/index.html">Экипаж</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,6/10</span>
@@ -790,9 +1335,9 @@ menuBurger.addClass('open');
   </section>
   <!--Гордость и предубеждение-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2000-е/Гордость и предубеждение/index.html"><img src="img/gordost.jpg" alt="Гордость и предубеждение"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D1%81%D1%82%D1%8C%20%D0%B8%20%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%B1%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5/index.html"><img src="img/gordost.jpg" alt="Гордость и предубеждение"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2000-е/Гордость и предубеждение/index.html">Гордость и предубеждение</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D1%81%D1%82%D1%8C%20%D0%B8%20%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%B1%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5/index.html">Гордость и предубеждение</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,0/10</span>
@@ -809,9 +1354,9 @@ menuBurger.addClass('open');
   </section>
   <!--Джокер-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2010-е/фильм Джокер/фильм Джокер/index.html"><img src="img/hehehe.jpg" alt="Джокер"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/index.html"><img src="img/hehehe.jpg" alt="Джокер"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2010-е/фильм Джокер/фильм Джокер/index.html">Джокер</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/index.html">Джокер</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,0/10</span>
@@ -828,9 +1373,9 @@ menuBurger.addClass('open');
   </section>
   <!--Вокзал для двоих-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 80/Вокзал для двоих/index.html"><img src="img/vokzal.jpg" alt="Вокзал для двоих"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%92%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%B2%D0%BE%D0%B8%D1%85/index.html"><img src="img/vokzal.jpg" alt="Вокзал для двоих"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 80/Вокзал для двоих/index.html">Вокзал для двоих</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%92%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%B2%D0%BE%D0%B8%D1%85/index.html">Вокзал для двоих</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,9/10</span>
@@ -847,9 +1392,9 @@ menuBurger.addClass('open');
   </section>
   <!--Красотка-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 90/Красотка/index.html"><img src="img/krasotka.jpg" alt="Красотка"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9A%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%BA%D0%B0/index.html"><img src="img/krasotka.jpg" alt="Красотка"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 90/Красотка/index.html">Красотка</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2090/%D0%9A%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%BA%D0%B0/index.html">Красотка</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">6,5/10</span>
@@ -866,9 +1411,9 @@ menuBurger.addClass('open');
   </section>
   <!--Аватар-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2000-е/Аватар/index.html"><img src="img/avatar.png" alt="Аватар"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%90%D0%B2%D0%B0%D1%82%D0%B0%D1%80/index.html"><img src="img/avatar.png" alt="Аватар"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2000-е/Аватар/index.html">Аватар</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202000-%D0%B5/%D0%90%D0%B2%D0%B0%D1%82%D0%B0%D1%80/index.html">Аватар</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,9/10</span>
@@ -885,9 +1430,9 @@ menuBurger.addClass('open');
   </section>
   <!--Старик Хоттабыч-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 50/старик Хоттабыч/index.html"><img src="img/hachatich.jpg" alt="Старик Хоттабыч"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D1%81%D1%82%D0%B0%D1%80%D0%B8%D0%BA%20%D0%A5%D0%BE%D1%82%D1%82%D0%B0%D0%B1%D1%8B%D1%87/index.html"><img src="img/hachatich.jpg" alt="Старик Хоттабыч"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 50/старик Хоттабыч/index.html">Старик Хоттабыч</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D1%81%D1%82%D0%B0%D1%80%D0%B8%D0%BA%20%D0%A5%D0%BE%D1%82%D1%82%D0%B0%D0%B1%D1%8B%D1%87/index.html">Старик Хоттабыч</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,8/10</span>
@@ -904,9 +1449,9 @@ menuBurger.addClass('open');
   </section>
   <!--Приключения Буратино-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 50/приключения Буратино/index.html"><img src="img/wooden_kid.jpg" alt="Приключения Буратино"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%91%D1%83%D1%80%D0%B0%D1%82%D0%B8%D0%BD%D0%BE/index.html"><img src="img/wooden_kid.jpg" alt="Приключения Буратино"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 50/приключения Буратино/index.html">Приключения Буратино</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2050/%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%91%D1%83%D1%80%D0%B0%D1%82%D0%B8%D0%BD%D0%BE/index.html">Приключения Буратино</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,7/10</span>
@@ -923,9 +1468,9 @@ menuBurger.addClass('open');
   </section>
   <!--Бегущий по лезвию-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 80/Бегущий по лезвию/index.html"><img src="img/blade_runner.jpg" alt="Бегущий по лезвию"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%91%D0%B5%D0%B3%D1%83%D1%89%D0%B8%D0%B9%20%D0%BF%D0%BE%20%D0%BB%D0%B5%D0%B7%D0%B2%D0%B8%D1%8E/index.html"><img src="img/blade_runner.jpg" alt="Бегущий по лезвию"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 80/Бегущий по лезвию/index.html">Бегущий по лезвию 2049</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%91%D0%B5%D0%B3%D1%83%D1%89%D0%B8%D0%B9%20%D0%BF%D0%BE%20%D0%BB%D0%B5%D0%B7%D0%B2%D0%B8%D1%8E/index.html">Бегущий по лезвию 2049</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,7/10</span>
@@ -942,9 +1487,9 @@ menuBurger.addClass('open');
   </section>
   <!--Гроздья гнева-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 40/гроздья гнева/1гроздья гнева/index.html"><img src="img/gnev.jpg" alt="Гроздья гнева"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/%D0%B3%D1%80%D0%BE%D0%B7%D0%B4%D1%8C%D1%8F%20%D0%B3%D0%BD%D0%B5%D0%B2%D0%B0/1%D0%B3%D1%80%D0%BE%D0%B7%D0%B4%D1%8C%D1%8F%20%D0%B3%D0%BD%D0%B5%D0%B2%D0%B0/index.html"><img src="img/gnev.jpg" alt="Гроздья гнева"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 40/гроздья гнева/1гроздья гнева/index.html">Гроздья гнева</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/%D0%B3%D1%80%D0%BE%D0%B7%D0%B4%D1%8C%D1%8F%20%D0%B3%D0%BD%D0%B5%D0%B2%D0%B0/1%D0%B3%D1%80%D0%BE%D0%B7%D0%B4%D1%8C%D1%8F%20%D0%B3%D0%BD%D0%B5%D0%B2%D0%B0/index.html">Гроздья гнева</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,6/10</span>
@@ -961,9 +1506,9 @@ menuBurger.addClass('open');
   </section>
   <!--Мстители. Финал-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 2010-е/фильм Джокер/фильм МстителиФинал/index.html"><img src="img/avengers.jpg" alt="Мстители. Финал"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%9C%D1%81%D1%82%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB/index.html"><img src="img/avengers.jpg" alt="Мстители. Финал"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 2010-е/фильм Джокер/фильм МстителиФинал/index.html">Мстители. Финал</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%202010-%D0%B5/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%9C%D1%81%D1%82%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB/index.html">Мстители. Финал</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,6/10</span>
@@ -980,9 +1525,9 @@ menuBurger.addClass('open');
   </section>
   <!--Бэтмен-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 80/Бэтмен/index.html"><img src="img/hehehe_with_bat.jpg" alt="Бэтмен"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%91%D1%8D%D1%82%D0%BC%D0%B5%D0%BD/index.html"><img src="img/hehehe_with_bat.jpg" alt="Бэтмен"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 80/Бэтмен/index.html">Бэтмен</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2080/%D0%91%D1%8D%D1%82%D0%BC%D0%B5%D0%BD/index.html">Бэтмен</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,5/10</span>
@@ -999,9 +1544,9 @@ menuBurger.addClass('open');
   </section>
   <!--Кубанские казаки-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 40/2кубанские казаки/index.html"><img src="img/kazaki.jpg" alt="Кубанские казаки"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/2%D0%BA%D1%83%D0%B1%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA%D0%B8/index.html"><img src="img/kazaki.jpg" alt="Кубанские казаки"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 40/2кубанские казаки/index.html">Кубанские казаки</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/2%D0%BA%D1%83%D0%B1%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA%D0%B8/index.html">Кубанские казаки</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">7,4/10</span>
@@ -1018,9 +1563,9 @@ menuBurger.addClass('open');
   </section>
   <!--Бэмби-->
   <section class="rating_shell">
-    <a class="rating__image" href="../фильмы по одному 40/3Бемби/index.html"><img src="img/bamby.jpg" alt="Бэмби"></a>
+    <a class="rating__image" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/3%D0%91%D0%B5%D0%BC%D0%B1%D0%B8/index.html"><img src="img/bamby.jpg" alt="Бэмби"></a>
     <article class="rating__info">
-      <a class="rating___topic" href="../фильмы по одному 40/3Бемби/index.html">Бэмби</a>
+      <a class="rating___topic" href="https://explorethetime.github.io/%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%BF%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83%2040/3%D0%91%D0%B5%D0%BC%D0%B1%D0%B8/index.html">Бэмби</a>
       <div class="first___mark">
         <div class="mark___title">
           КиноПоиск <span class="mark poisk_mark">8,1/10</span>
@@ -1035,18 +1580,23 @@ menuBurger.addClass('open');
         </div>
     </article>
   </section>
+      </div>
 
-         <div class="bg2">
-  <img class="line3" src='img/aline2.png'>
-     <h1 class="media">КОНТАКТЫ</h1>
-   <p class="q">Остались вопросы? Свяжись с нами.</p>
-                <div class="contacts">
-   <a href="https://www.instagram.com/explore_the_time/" target="_blank"><img class="inst" src="img/%20inst.svg"></a>
-     <a href="https://t.me/explore_the_time" target="_blank"><img class="tel" src="img/telegram.svg"></a>
-     <a href="https://vk.com/club203725152" target="_blank"><img class="vko" src="img/vk.svg"></a>
+        
+        <div class="bg2">
+           
+     <div class="media">КОНТАКТЫ</div>
+   <div class="q">Остались вопросы? Свяжись с нами.</div>
+         <div class="contacts">
+            <a href="https://www.instagram.com/explore_the_time/?igshid=6x90uwrzps1z" target="_blank"><img class="inst" src="img/inst.svg"></a> 
+            <a href="https://t.me/explore_the_time" target="_blank"><img class="tg" src="img/telegram.svg"></a>
+            <a href="https://vk.com/club203725152" target="_blank"><img class="vk" src="img/vk.svg"></a>
+            </div>
+            <div>
+            <img class="scrollup" src="img/knopka.svg">
+            </div>
+        </div>
 
-      <img class="scrollup" src="img/knopka.svg">
-             </div>
         <script>
         $(document).ready(function(){
 
@@ -1065,7 +1615,7 @@ return false;
 
 });
         </script>
-
+  
 
   </body>
 </html>
