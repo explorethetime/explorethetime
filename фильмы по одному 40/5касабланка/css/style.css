@@ -1441,6 +1441,16 @@ display: inline-block;
 width: 5vw;
 height: 5vw;
 }
+    a.bu{
+        font-size: 25px;
+        color: white;
+      font-weight: 700;
+        font-family: 'Play', sans-serif;
+         position: relative;
+list-style-type: none;
+display: inline-block;
+        padding: 0 65px;
+        margin-bottom: 20px;
     
 * {
 box-sizing: border-box;
@@ -1555,17 +1565,18 @@ position: relative;
 color: #fff;
 list-style-type: none;
 font-size: 25px;
-margin-bottom: 0;
+margin-bottom: 15px;
 }
 
 #overlay-menu nav ul li a {
 color: #fff;
 }
-}
+
 .down_arrow{
-max-width: 10px;
+max-width: 15px;
 margin: 3%  2%;
     }
+}
 @media only screen and (max-device-width:1024px) {
    .slider {
 	position: absolute;
@@ -1691,6 +1702,7 @@ margin-bottom: 10%;
     margin: 0 2px 0;
     padding: 0 10px;
     text-align: left;
+}
 }
 
 @media only screen and (max-device-width:548px) {
