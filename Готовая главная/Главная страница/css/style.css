@@ -126,10 +126,8 @@ text-align: center;
 color: rgba(255, 255, 255, 0.88);
 text-decoration: none; 
 }
-/*            Выплывающее меню*/
 nav {
     width: 100%;
-
   margin: 0 auto;
 }
 nav ul {
@@ -181,7 +179,7 @@ margin: 100px 0;
   opacity: 1;
   transform: scaleY(1);
 }
-/*    КОНЕЦ НАВИГАЦИИ С ВЫПЛЫВАЮЩИМ МЕНЮ*/
+
 /*Ссылка "Главная"----------------------------------------*/
 .butt_m::after {
   -webkit-transition: all 0.3s;
@@ -223,6 +221,7 @@ margin: 100px 0;
 .butt_r:hover {
   font-weight: bold;
 }
+
 
 
 /*Ссылка "Пазлы"---------------------------------------*/
@@ -269,7 +268,6 @@ margin: 100px 0;
 {
   font-weight: bold;
 }
-
 
 
 
@@ -1537,7 +1535,158 @@ margin: 0 2%;
      
     }
 }
+.menu
+{
+width: 98vw;
 
+height: 3.75vw; 
+display: flex;
+justify-content: space-around;
+z-index: 50;
+
+}
+
+
+.butt_m,
+.butt_r,
+.butt_p,
+.butt_t,
+.butt_a,
+.butt_c
+{  
+font-family: 'Play', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 2.50vw;
+text-align: center;
+color: rgba(255, 255, 255, 0.88);
+text-decoration: none; 
+}
+    
+/*Ссылка "Главная"----------------------------------------*/
+.butt_m::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_m::before,
+.butt_m::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_m:hover {
+  font-weight: bold;
+}
+
+/*Ссылка "Рейтинг"---------------------------------------*/
+.butt_r::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_r::before,
+.butt_r::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_r:hover {
+  font-weight: bold;
+}
+
+/*Ссылка "Пазлы"---------------------------------------*/
+.butt_p::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_p::before,
+.butt_p::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_p:hover {
+  font-weight: bold;
+}
+
+ /*Ссылка "Тесты"*/
+.butt_t::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_t::before,
+.butt_t::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_t:hover 
+{
+  font-weight: bold;
+}
+
+/*Ссылка "О нас"---------------------------------------*/
+.butt_a::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_a::before,
+.butt_a::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_a:hover 
+{
+  font-weight: bold;
+}
+
+/*Ссылка "Контакты"-----------------------------------*/
+.butt_c::after 
+{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butt_c::before,
+.butt_c::after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.butt_c:hover {
+  font-weight: bold;
+}
 
 .scrollup{
 width: 5%;
