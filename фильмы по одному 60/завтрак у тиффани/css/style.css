@@ -342,7 +342,7 @@ color: #FFFFFF;
 
 
 
-.six {
+.seven {
     width: 25%;
     height: 10%;
     position: absolute;
@@ -359,9 +359,9 @@ border-radius: 40px;
     font-family: 'Play', sans-serif;
     font-size: 230%;
 }
-.six:focus,
-.six:active,
-.six:hover {
+.seven:focus,
+.seven:active,
+.seven:hover {
     outline: none;
     background: rgba(219, 38, 38, 0.8);
 }
@@ -1124,7 +1124,7 @@ color: #FFFFFF;
 }
 
 
-.six {
+.seven {
     width: 25vw;
     height: 7vw;
     position: absolute;
@@ -1142,9 +1142,9 @@ color: #FFFFFF;
     font-size: 2.5vw;
 }
     
-.six:focus,
-.six:active,
-.six:hover {
+.seven:focus,
+.seven:active,
+.seven:hover {
     outline: none;
     background: rgba(219, 38, 38, 0.8);
 }
