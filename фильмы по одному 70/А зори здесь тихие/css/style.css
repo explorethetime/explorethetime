@@ -809,8 +809,6 @@ margin: 0 2%;
 	display: block;
 	font-weight: 700;
       font-family: 'Play', sans-serif;
-	height: 35px;
-	line-height: 50px;
 	padding: 0;
 	text-decoration: none;
 	vertical-align: top;
@@ -1371,7 +1369,7 @@ z-index: 200;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 113vw;
+    top: 118vw;
     width: 100vw; 
     margin-right: 11.5vw; 
 }
@@ -1387,7 +1385,17 @@ display: inline-block;
 width: 5vw;
 height: 5vw;
 }
-    
+a.bu{
+        font-size: 25px;
+        color: white;
+      font-weight: 700;
+        font-family: 'Play', sans-serif;
+         position: relative;
+list-style-type: none;
+display: inline-block;
+        padding: 0 65px;
+        margin-bottom: 20px;
+    }    
 * {
 box-sizing: border-box;
 }
@@ -1400,7 +1408,7 @@ text-decoration: none;
 background: rgba(141, 11, 35, 0.88);
 border-radius: 30vw;
 position: fixed;
-margin:-13vw 103vw;
+margin:-10vw 97vw;
 cursor: pointer;
 z-index: 200;
 }
@@ -1469,7 +1477,7 @@ background: #fff;
 position: fixed;
 background: rgba(141, 11, 35, 0.88);
 height: 100%;
-width: 30vw;
+width: 35vw;
 top: 0;
 opacity: 0.85;
 z-index: 100;
@@ -1501,7 +1509,7 @@ position: relative;
 color: #fff;
 list-style-type: none;
 font-size: 25px;
-margin-bottom: 0;
+margin-bottom: 15px;
 }
 
 #overlay-menu nav ul li a {
@@ -1509,7 +1517,7 @@ color: #fff;
 }
 }
 .down_arrow{
-max-width: 10px;
+max-width: 15px;
 margin: 3%  2%;
     }
 @media only screen and (max-device-width:1024px) {
@@ -1529,7 +1537,7 @@ margin: 3%  2%;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 107vw;
+    top: 120vw;
     width: 100vw; 
     margin-right: 17vw; 
 }
@@ -1587,7 +1595,7 @@ display: inline-block;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 106vw;
+    top: 119vw;
     width: 100vw; 
     margin-right: 3vw; 
 }
@@ -1608,26 +1616,30 @@ text-align: justify;
 margin: 0 20%;
 }
 
-
+#overlay-menu nav ul {
+    margin: auto;
+    height: 0%;
+    padding: 0 7%;
+    }
 #overlay-menu nav ul li {
 position: relative;
 color: #fff;
 list-style-type: none;
 font-size: 20px;
-margin-bottom: 20%;
+margin-bottom: 10%;
 }
     
      a.bu{
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 20px;
     display: block;
     padding: 0 15px;
     font-weight: 700;
     font-family: 'Play', sans-serif;
     list-style-type: none;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     margin-left: 0;
     }
     .accordeon li {
@@ -1652,7 +1664,7 @@ margin-bottom: 20%;
     .slider {
 	position: relative;
 	padding: 0vw;
-    top: 110vw;
+    top: 122vw;
     width: 100vw; 
     margin-right: 3vw; 
 }
@@ -1676,7 +1688,7 @@ text-align: justify;
 margin: 0 35%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 20px;
 }
    
 }
@@ -1694,13 +1706,13 @@ font-size: 30px;
 height: 70vw;
 position: relative;
 top: 50vw;
-left: 7%;
+left: 1%;
 transform: translateY(-50%);
 text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 15px;
 	margin: 20% 0;
     
 }
@@ -1709,7 +1721,7 @@ font-size: 30px;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 15px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -1723,7 +1735,7 @@ font-size: 30px;
     text-align: left;
 }
     .accordeon > li > a {
-    margin: 10% 0;
+    margin: 0% 0% 10% 7%;
             }
 @media only screen and (max-device-width:400px) {
     .slider__item {
@@ -1752,12 +1764,12 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
+font-size: 15px;
 margin: 20% 0;
     
 }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 3%  2%;
     }
 }
@@ -1808,21 +1820,19 @@ margin: 3%  2%;
 height: 50vw;
 position: relative;
 top: 50vw;
-left: 12%;
 transform: translateY(-50%);
 text-align: justify;
-margin: 5%;
 }
 #overlay-menu nav ul li {
-font-size: 30px;
-margin: 20% 0%;
+font-size: 10px;
+margin: 10% 0%;
     
 }
        a.bu{
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 10px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -1835,7 +1845,6 @@ margin: 20% 0%;
         height: 0%;
     }
     .down_arrow{
-max-width: 15px;
+max-width: 10px;
 margin: 7%  -3%;
-    }
     }
