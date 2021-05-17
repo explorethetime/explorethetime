@@ -1492,8 +1492,6 @@ margin: 0 2%;
 	display: block;
 	font-weight: 700;
       font-family: 'Play', sans-serif;
-	height: 35px;
-	line-height: 50px;
 	padding: 0;
 	text-decoration: none;
 	vertical-align: top;
@@ -1536,6 +1534,7 @@ margin: 0 2%;
      
     }
 }
+/*КОНЕЦ МЕНЮ-БУРГЕРА*/
 .menu
 {
 width: 98vw;
@@ -2336,7 +2335,7 @@ margin: 0 20%;
 position: relative;
 color: #fff;
 list-style-type: none;
-font-size: 20px;
+font-size: 25px;
 margin-bottom: 10%;
 }
     
@@ -2344,7 +2343,7 @@ margin-bottom: 10%;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 25px;
     display: block;
     padding: 0 15px;
     font-weight: 700;
@@ -2370,7 +2369,7 @@ text-align: justify;
 margin: 0 35%;
 }
 #overlay-menu nav ul li {
-font-size: 20px;
+font-size: 25px;
 }
    
 }
@@ -2386,7 +2385,7 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 15px;
+font-size: 30px;
 	margin: 20% 0;
     
 }
@@ -2395,7 +2394,7 @@ font-size: 15px;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 15px;
+    font-size: 30px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -2422,7 +2421,7 @@ text-align: justify;
 margin: 0;
 }
 #overlay-menu nav ul li {
-font-size: 15px;
+font-size: 30px;
 margin: 20% 0;
     
 }
@@ -2441,7 +2440,7 @@ transform: translateY(-50%);
 text-align: justify;
 }
 #overlay-menu nav ul li {
-font-size: 10px;
+font-size: 30px;
 margin: 10% 0%;
     
 }
@@ -2449,7 +2448,7 @@ margin: 10% 0%;
     position: relative;
     color: #fff;
     list-style-type: none;
-    font-size: 10px;
+    font-size: 30px;
     display: block;
     font-weight: 700;
     font-family: 'Play', sans-serif;
@@ -2464,4 +2463,5 @@ margin: 10% 0%;
     .down_arrow{
 max-width: 10px;
 margin: 7%  -3%;
+    }
     }
