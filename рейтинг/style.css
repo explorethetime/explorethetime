@@ -44,6 +44,8 @@ body *, html * {
 .rating__image img {
     margin-left: 25%;
   max-height: 498px;
+  max-width: 350px;
+  min-width: 350px;
 }
 
 .rating__info {
