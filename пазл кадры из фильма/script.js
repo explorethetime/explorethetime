@@ -1,5 +1,5 @@
 
-var img = ['https://wl-adme.cf.tsp.li/resize/728x/jpg/b61/d0f/8923155db3b6f2fd6a84cd05a6.jpg', 'https://beztabu.net/uploads/770x433_DIR/media_news/2018/12/5c1bbb6dc9949090800340.jpg', 'https://kinowar.com/wp-content/uploads/2020/05/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80-Interstellar.jpg', 'https://ic.pics.livejournal.com/ego_drakonis/84615623/21529/21529_800.jpg', 'https://www.film.ru/sites/default/files/images/1(10).jpg', 'https://lh3.googleusercontent.com/proxy/rwjIFsRrP2YsCPW7OAJuCuJfzf8NwLjp2Ejk53t9OFvLG8PgcziGnpAwzYsHjO5vQr83xJGRI4NwBKtITRggzQYHssp44E8'];
+var img = ['https://wl-adme.cf.tsp.li/resize/728x/jpg/b61/d0f/8923155db3b6f2fd6a84cd05a6.jpg', 'https://beztabu.net/uploads/770x433_DIR/media_news/2018/12/5c1bbb6dc9949090800340.jpg', 'https://kinowar.com/wp-content/uploads/2020/05/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80-Interstellar.jpg', 'https://ic.pics.livejournal.com/ego_drakonis/84615623/21529/21529_800.jpg', 'https://www.film.ru/sites/default/files/images/1(10).jpg', 'https://www.film.ru/sites/default/files/images/MV5BMjI3NjcxNTAyM15BMl5BanBnXkFtZTcwMDkwNDUzNw@@__V1_SX1366_CR0,0,1366,919_AL_.jpg'];
 var old = 5;
 var clicks = 0;
 function randomize() {
