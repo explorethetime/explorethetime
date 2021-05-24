@@ -50,7 +50,7 @@ window.onload = function () {
         document.querySelector('main').appendChild(img);
 
         let reloadButton = document.createElement('button');
-        reloadButton.innerHTML = 'New quiz';
+        reloadButton.innerHTML = 'Пройти заново!';
         reloadButton.classList.add('reload-button');
         document.querySelector('main').appendChild(reloadButton);
     }
